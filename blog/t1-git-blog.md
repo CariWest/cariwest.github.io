@@ -1,0 +1,17 @@
+What is Git?
+
+And Why Should You Care?
+
+21 November 2014
+
+Have you ever used the "undo" button? It's pretty glorious. It takes that mistake you made - that ugly typo or the weird font - and takes you back to a better state. As long as you can remember what point you want to go back to, the "undo" button works wonders. But what if your mistake was twenty mistakes ago? Of fifty? Do you remember exactly when your project wasn't broken? Or are you going to hit "undo" blindly hoping to find unbroken code which might still work?
+
+There is a glorious tool in programming which is so much more powerful than a simple "undo" button. It allows you to go back to a better version - any version, really. Git is a tool which saves different versions of your project so that you can rewind one mistake (or twenty mistakes) based on your needs. It is more powerful than a simple "undo" button because it allows you to mark points within your project where you fixed something or did something right.
+
+Git is not a blind "undo" through which you hope to rediscover a working version of your code, but a thoughtful "undo" which allows you to return to a specific version of your code which is more correct. This is what we call Version Control: the act of placing a bookmark (of sorts) in the code which works the way you want.
+
+In turn, GitHub is like a child of the glorious union between git (the perfect undo button), Dropbox (remote online storage), and Open Source (knowledge sharing). GitHub is a tool which allows programmers to upload their code so that it is available anywhere, anytime (assuming you have access to an internet connection which is moderately more capable than dialup). Simultaneously, GitHub is  an amazing collaborative tool which allows programmers post their code publically so that anyone can use, change, or learn from the code. If you're lucky, someone might even help you improve the code.
+
+GitHub is important to me because sometimes I don't have all the answers; sometimes (especially as I'm learning), I could desperately use the opinions of those who have more experience than I have. In turn, sometimes I have the answers that someone else is seeking. With GitHub, there is a centralized location where we can all help each other. I can find and use a tool which someone else has already created and which will help my project; in return, I can offer changes or suggestions to that tool so that it is a better tool. GitHub is a place where we can all work together for the greater good of programming. It is a place where paying-it-forward (helping someone else with their code) is mutually beneficial and highly encouraged.
+
+Now if only I could use Version Control to return to a time before my terrible date last week.
