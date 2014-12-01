@@ -22,7 +22,7 @@
 
     <p>When you declare an element to have <b>position: static</b>, you're effectively telling the element to <i>do the same thing it's been doing</i>. While this might not seem useful, it's important to know that all elements have a default position of static. If it helps you think about it, feel free to declare it! As you get more facile at coding, you'll find you don't need to declare the static.</p>
 
-    <h3>position: general notes</h3>
+    <h3>positioning: general notes</h3>
 
     <p>One thing which is not immediately clear is that when you give an element a position (which is not static), it will not automatically move. You also have to tell the element where to move in relation to its current place. To do this, you use the properties "top," "bottom", "left," and "right" to move the element around.</p>
 
@@ -36,17 +36,16 @@
 
     <p>Keep in mind that as you move an element relatively, it may overlap another element on the page. If you are moving multiple items relatively, you can go about it in two main ways.
       <ul>
-        <li>When you move an element relatively, the space that element would normally occupy <i>still exists</i>. This means that other elements won't collapse to fill in the space!</li>
         <li>Every single time you need to move an element the same way you moved a different element (i.e., move three separate p elements down), you will need to apply the same CSS code. This can be done fairly easily with a class selector.</li>
         <li>If the items are all near each other, you can put them in a single "div" and move that entire element as you need. This is the preferred method when possible because it simplifies your code significantly.</li>
       </ul>
     </p>
 
+    <p>When you move an element relatively, the space that element would normally occupy <i>still exists</i>. This means that other elements won't collapse to fill in the space!</p>
+
     <h3>position: absolute</h3>
 
     <p>This property is pretty powerful in that you can move an item anywhere you want on a page with very precise control. However, this can also be dangerous. There are so many different ways a person can view a webpage (different browsers, mobile devices, or tablets) that your website might render strangely on different media.</p>
-
-    <h3>positioning: combining absolute and relative</h3>
 
     <p>Absolute positioning gets particularly powerful when it is combined with a parent who has a "relative" position value. Using this combination, you can position the parent element relatively on the page and then position the child element <i>within</i> that parent element. This allows us to set a dynamic element which will move based on the flow of the website, but it also allows us to exact extreme control over the child element.</p>
 
@@ -65,11 +64,7 @@
         <li>When you want to stack two elements right next to each other on the same line, give them the same float value. For example, if you use "float: left" for both your elements, they will line up next to each other on the left-hand side of the page.</li>
       </ul>
 
-    <h3>What did I learn from this?</h3>
-
-    <p>When I first started learning about positioning, I somehow associated the property with block, inline-block, and inline values for the display property. I was definitely over-complicating the issue, and it confused me for a long time.</p>
-
-    <p>Next time I get confused, I am going to try to remember that 1) It's probably simpler than I am making it, and 2) There are some great resources online to help me figure things out! For example, I really benefitted from <a href="http://www.barelyfitz.com/screencast/html-training/css/positioning/">this</a> tutorial, which is simple and unambiguous.</p>
+    <hr>
 
     <p>*Please note that CSS positioning will not help you in bed. Unless your significant other is really, <i>really</i> interested in an aesthetically pleasing website.</p>
 
