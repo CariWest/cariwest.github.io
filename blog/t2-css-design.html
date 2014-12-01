@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+  <title><!-- Page Title --></title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<main>
+  <h1>Positioning</h1>
+  <h2>The Kama Sutra of CSS</h2>
+  <h4>30 November 2014</h4>
+
+  <div id="horizontalRule"></div>
+
+  <section>
+
+    <p>In CSS, there is no such thing as "drag and drop into your desired location" or "snap to grid." If you really want to fully control your website, you need a good grasp on positioning through CSS properties. </p>
+
+    <p>Positioning in CSS is kind of like the Kama Sutra. It can be complex, difficult, and overwhelming for those with little to no experience. However, a complete understanding of positioning can yield amazing and rewarding results.</p>
+
+    <h5>position: static<h5>
+
+    <p>When you declare an element to have <b>position: static</b>, you're effectively telling the element to <i>do the same thing it's been doing</i>. While this might not seem useful, it's important to know that all elements have a default position of static. If it helps you think about it, feel free to declare it! As you get more facile at coding, you'll find you don't need to declare the static.</p>
+
+    <h4>position: general notes</h4>
+
+    <p>One thing which is not immediately clear is that when you give an element a position (which is not static), it will not automatically move. You also have to tell the element where to move in relation to its current place. To do this, you use the properties "top," "bottom", "left," and "right" to move the element around.</p>
+
+    <p>For example, you might give an element a property of "top: 10px" to move it down 10 pixels. Remember that these are positive changes, so you are adding additional space between your element and its parent element. Of course, you can also use a negative value ("top: -10px") to remove space between your element and its parent element.</p>
+
+    <p>In addition, when working with "relative" and "absolute" positioning, the item will always move in relation to its <b>parent</b> element. You are <i>not</i> moving the element in relation to the page or in relation to other element you've been working on which is actually a sibling element and not a parent element. An element with a "fixed" value will behave a little differently, but we'll get to that later.</p>
+
+    <p><b>position: relative</b></p>
+
+    <p>When you want to move an element in relation to its parent element, you will declare <b>position: relative</b>. Just declaring the position will not move the element, of course - you also have to tell it where to move. </p>
+
+    <p>Keep in mind that as you move an element relatively, it may overlap another element on the page. If you are moving multiple items relatively, you can go about it in two main ways.
+      <ul>
+        <li>Every single time you need to move an element the same way you moved a different element (i.e., move three separate p elements down), you will need to apply the same CSS code. This can be done fairly easily with a class selector.</li>
+        <li>If the items are all near each other, you can put them in a single "div" and move that entire element as you need. This is the preferred method when possible because it simplifies your code significantly.</li>
+      </ul>
+    </p>
+
+    <p><b>position: absolute</b></p>
+
+    <p>This property is pretty powerful in that you can move an item anywhere you want on a page with very precise control. However, this can also be dangerous. There are so many different ways a person can view a webpage (different browsers, mobile devices, or tablets) that your website might render strangely on different media.</p>
+
+    <p><b>positioning: combining absolute and relative</b></p>
+
+    <p>Absolute positioning gets particularly powerful when it is combined with a parent who has a "relative" position value. Using this combination, you can position the parent element relatively on the page and then position the child element <i>within</i> that parent element. This allows us to set a dynamic element which will move based on the flow of the website, but it also allows us to exact extreme control over the child element.</p>
+
+    <p><b>position: fixed<b></p>
+
+    <p>An element with fixed positioning will behave a little differently from elements with absolute or relative positioning. Using this value will cause an element to stay <i>exactly</i> where it is in relation to the browser window. As you scroll up and down, the element with a fixed position will not move.</p>
+
+    <p>A fixed position is useful, for example, if you want to keep a navigation bar in one place on a webpage. However, it can also be dangerous - if you don't test the navigation bar in multiple browsers and scenarios, you might find that your element with fixed positioning runs off the page, sits on top of other elements, or generally gets in the way of your website. If you're thinking about giving an element a fixed position, make sure you think of all the ways it could go wrong. And then choose something else, anyway, because it will probably be better in the long run.</p>
+
+    <p><b>float: left vs right</b></p>
+
+    <p>While a float does not fall under the position property, it is a useful tool when positioning elements on a page! A float will push an element all the way to one side of the page or another. There are some interesting concepts here.</p>
+      <ul>
+        <li>If a float is the child of a parent who uses relative positioning, the element will float in relation to its parent element.</li>
+        <li>You can combine float and a relative positioning to excise more precise control over the element. However, you should be aware that moving the element could also probably be done solely with positioning, which would result in simpler code.</li>
+        <li>When you want to stack two elements right next to each other on the same line, give them the same float value. For example, if you use "float: left" for both your elements, they will line up next to each other on the left-hand side of the page.</p>
+
+    <p><b>What did I learn from this?</b></p>
+
+    <p>When I first started learning about positioning, I somehow associated the property with block, inline-block, and inline values for the display property. I was definitely over-complicating the issue, and it confused me for a long time.</p>
+
+    <p>Next time I get confused, I am going to try to remember that 1) It's probably simpler than I am making it, and 2) There are some great resources online to help me figure things out! For example, I really benefitted from <a href="http://www.barelyfitz.com/screencast/html-training/css/positioning/">this</a> tutorial, which is simple and unambiguous.</p>
+
+    <p>*Please note that CSS positioning will not help you in bed. Unless your significant other is really, <i>really</i> interested in an aesthetically pleasing website.</p>
+
+  </section>
+
+</main>
+
