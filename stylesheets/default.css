@@ -4,6 +4,29 @@ html {
   background-color: #8596A6;
 }
 
+a {
+  text-decoration: none;
+  color: #2F3640;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  height: 2em;
+  width: 2em;
+}
+
+div div img {
+  float: left;
+  height: 20em;
+  width: 20em;
+  margin-top: 1em;
+  margin-left: 15%;
+  margin-bottom: 3em;
+}
+
 * {
   font-family: "Bitter", serif;
   color: #2F3640;
@@ -23,9 +46,7 @@ html {
   text-align: center;
 }
 
-/* HEADER */
-
-#header {
+.header {
   display: block;
   position: relative;
   top: 1em;
@@ -33,12 +54,12 @@ html {
   width: 100%;
 }
 
-#name {
+.name {
   font-size: 4em;
   color: #F2DCC2;
 }
 
-#subheader {
+.subheader {
   position: relative;
   top: -2.5em;
   left: 1em;
@@ -46,15 +67,13 @@ html {
   color: #F2DCC2;
 }
 
-#navigation {
+.navigation {
   display: block;
   position: relative;
   margin-top: .5em;
   height: 10%;
   width: 100%;
 }
-
-/* NAVIGATION TOOLBAR */
 
 .button {
   display: inline-block;
@@ -65,32 +84,12 @@ html {
   text-align: center;
 }
 
-a {
-  text-decoration: none;
-  color: #2F3640;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* CONTENT */
-
 .contentheader {
   font-size: 1.5em;
   color: #F2DCC2;
 }
 
-div div img {
-  float: left;
-  height: 20em;
-  width: 20em;
-  margin-top: 1em;
-  margin-left: 15%;
-  margin-bottom: 3em;
-}
-
-#content {
+.content {
   display: block;
   margin-top: .5em;
   margin-left: 40%;
@@ -101,13 +100,11 @@ div div img {
   top: 2em;
 }
 
-#blogposts {
+.blogposts {
   position: relative;
   top: -1em;
   list-style-type: none;
 }
-
-/* ICONS */
 
 .icon {
   display: inline-block;
@@ -116,7 +113,3 @@ div div img {
   padding-top: .5em;
 }
 
-img {
-  height: 2em;
-  width: 2em;
-}
