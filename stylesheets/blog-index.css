@@ -2,22 +2,19 @@ html{
   background-color: #8596A6;
   font-family: "Bitter", serif;
   color: #2F3640;
+  height:100%;
 }
 
 body {
   height: 100%;
-
-}
-
-header {
-  margin-top: 2em;
+  margin: 0px;
 }
 
 footer {
   position: absolute;
-  bottom: 1em;
-  height: 3em;
+  height: 2em;
   width: 100%;
+  bottom: 1em;
 }
 
 blogs-list {
@@ -80,6 +77,11 @@ footer ul li a img {
   width: 2em;
 }
 
+.container {
+   min-height:100%;
+   position:relative;
+}
+
 .horizontal {
   border-top: 2px solid #F2E3D5;
   clear: both;
@@ -89,6 +91,10 @@ footer ul li a img {
   margin: auto;
   text-align: center;
   padding: 0px;
+}
+
+.header {
+  padding:10px;
 }
 
 .name {
@@ -107,4 +113,6 @@ footer ul li a img {
 
 .content {
   padding: 10px;
+  min-height: 20em;
+  padding-bottom: 5em;
 }
