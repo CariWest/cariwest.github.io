@@ -1,7 +1,24 @@
-/* GENERAL */
-
 html {
   background-color: #8596A6;
+  height: 100%;
+  font-family: "Bitter", serif;
+  color: #2F3640;
+}
+
+body {
+  height: 100%;
+  margin: 0px;
+}
+
+header {
+  padding:1em;
+}
+
+footer {
+  position: absolute;
+  height: 4em;
+  width: 100%;
+  bottom: 0em;
 }
 
 a {
@@ -13,103 +30,96 @@ a:hover {
   text-decoration: underline;
 }
 
-img {
+span {
+  color: #F2DCC2;
+  font-size: 1.5em;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+ul li {
+  list-style: none;
+}
+
+div div img {
+  height: 20em;
+  width: 20em;
+}
+
+nav_main ul li {
+  display: inline-block;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  font-size: 1.25em;
+  padding: .5em;
+}
+
+nav_main ul li a {
+  color: #F2DCC2;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-top: .5em;
+  margin-left: .25em;
+  margin-right: .25em;
+}
+
+footer ul li a img {
   height: 2em;
   width: 2em;
 }
 
-div div img {
-  float: left;
-  height: 20em;
-  width: 20em;
-  margin-top: 1em;
-  margin-left: 15%;
-  margin-bottom: 3em;
+.container {
+  min-height: 100%;
+  position: relative;
 }
 
-* {
-  font-family: "Bitter", serif;
-  color: #2F3640;
+.content {
+  min-height: 30em;
+  padding-bottom: 5em;
 }
 
 .horizontal {
-  display: block;
-  margin-top: 1em;
-  height: 1px;
-  border-top: 2px solid #F2DCC2;
+  border-top: 2px solid #F2E3D5;
   clear: both;
 }
 
-.centerIt {
-  position: relative;
+.center-it {
   margin: auto;
   text-align: center;
-}
-
-.header {
-  display: block;
-  position: relative;
-  top: 1em;
-  height: 8em;
-  width: 100%;
+  padding: 0px;
 }
 
 .name {
+  margin-top: 1em;
+  margin-bottom: 0em;
   font-size: 4em;
   color: #F2DCC2;
 }
 
 .subheader {
-  position: relative;
-  top: -2.5em;
-  left: 1em;
+  margin-top: 0em;
+  margin-left: 1em;
   font-size: 1.5em;
   color: #F2DCC2;
 }
 
-.navigation {
-  display: block;
-  position: relative;
-  margin-top: .5em;
-  height: 10%;
-  width: 100%;
+.picture {
+  float: left;
+  margin-left: 15%;
+  margin-top: 5%;
 }
 
-.button {
-  display: inline-block;
-  margin-top: 1em;
-  margin-left: 2em;
-  margin-right: 2em;
-  padding: .5em;
-  text-align: center;
+.welcome {
+  float: left;
+  width: 50%;
+  margin-left: 5%;
+  margin-top: 5%;
 }
 
-.contentheader {
-  font-size: 1.5em;
-  color: #F2DCC2;
-}
 
-.content {
-  display: block;
-  margin-top: .5em;
-  margin-left: 40%;
-  padding: 1em;
-  height: 18em;
-  width: 40%;
-  position: relative;
-  top: 2em;
-}
 
-.blogposts {
-  position: relative;
-  top: -1em;
-  list-style-type: none;
-}
-
-.icon {
-  display: inline-block;
-  position: relative;
-  margin: .25em;
-  padding-top: .5em;
-}
 

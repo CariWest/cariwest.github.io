@@ -10,6 +10,10 @@ body {
   margin: 0px;
 }
 
+header {
+  padding:1em;
+}
+
 footer {
   position: absolute;
   height: 2em;
@@ -93,8 +97,10 @@ footer ul li a img {
   padding: 0px;
 }
 
-.header {
-  padding:10px;
+.content {
+  padding: 10px;
+  min-height: 20em;
+  padding-bottom: 5em;
 }
 
 .name {
@@ -109,10 +115,4 @@ footer ul li a img {
   margin-left: 1em;
   font-size: 1.5em;
   color: #F2DCC2;
-}
-
-.content {
-  padding: 10px;
-  min-height: 20em;
-  padding-bottom: 5em;
 }
