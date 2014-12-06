@@ -113,6 +113,10 @@ footer ul li a img {
   margin-top: 5%;
 }
 
+.contentheader {
+  margin-top: 0em;
+}
+
 .welcome {
   float: left;
   width: 50%;
