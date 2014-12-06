@@ -15,10 +15,35 @@ header {
 }
 
 footer {
-  position: absolute;
+  position: relative;
+  padding: 1em;
   height: 4em;
-  width: 100%;
-  bottom: 0em;
+  width: 98%;
+}
+
+blogs-list {
+  width: 30%;
+  float: left;
+  margin-left: 2em;
+}
+
+blog-post {
+  width: 50%;
+  float: left;
+  margin-left: 5%;
+}
+
+picture {
+  float: left;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+welcome {
+  float: left;
+  width: 50%;
+  margin-left: 5%;
+  margin-top: 5%;
 }
 
 a {
@@ -30,22 +55,17 @@ a:hover {
   text-decoration: underline;
 }
 
+p a {
+  text-decoration: underline;
+}
+
 span {
   color: #F2DCC2;
   font-size: 1.5em;
 }
 
-ul {
-  padding-left: 0px;
-}
-
-ul li {
-  list-style: none;
-}
-
-div div img {
-  height: 20em;
-  width: 20em;
+strong {
+  color: #F2DCC2;;
 }
 
 nav_main ul li {
@@ -54,10 +74,24 @@ nav_main ul li {
   margin-right: 1.5em;
   font-size: 1.25em;
   padding: .5em;
+  list-style: none;
 }
 
 nav_main ul li a {
   color: #F2DCC2;
+}
+
+picture div img {
+  height: 20em;
+  width: 20em;
+}
+
+blogs-list ul {
+  padding-left: 0em;
+}
+
+blogs-list ul li {
+  list-style:none;
 }
 
 footer ul li {
@@ -77,11 +111,6 @@ footer ul li a img {
   position: relative;
 }
 
-.content {
-  min-height: 30em;
-  padding-bottom: 5em;
-}
-
 .horizontal {
   border-top: 2px solid #F2E3D5;
   clear: both;
@@ -93,6 +122,11 @@ footer ul li a img {
   padding: 0px;
 }
 
+.content {
+  min-height: 24em;
+  padding: 1em 1em 5em 1em;
+}
+
 .name {
   margin-top: 1em;
   margin-bottom: 0em;
@@ -101,29 +135,22 @@ footer ul li a img {
 }
 
 .subheader {
+  display: inline-block;
   margin-top: 0em;
   margin-left: 1em;
   font-size: 1.5em;
   color: #F2DCC2;
 }
 
-.picture {
-  float: left;
-  margin-left: 15%;
-  margin-top: 5%;
-}
-
-.contentheader {
+.date {
+  display: inline-block;
+  float: right;
   margin-top: 0em;
+  font-size: 1.5em;
+  text-align: right;
+  color: #F2DCC2;
 }
 
-.welcome {
-  float: left;
-  width: 50%;
-  margin-left: 5%;
-  margin-top: 5%;
+.blog-img {
+  margin-left: 2em;
 }
-
-
-
-
