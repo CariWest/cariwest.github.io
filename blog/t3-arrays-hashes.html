@@ -67,7 +67,9 @@
 
           <p class="blog-img"><img src="../imgs/making-hash.png" alt="making-hash"/></p>
 
-          <p>You would then access the desired value using the associated key.</p>
+          <p>You would then access the desired value using the associated key. This example demonstrates one of the most popular key types, which is a symbol. Symbols are very similar to strings, with one key difference: symbols are immutable. This means the symbol cannot be changed (though it can be overwritten, which is slightly different).</p>
+
+          <p>Another advantage is that a symbol has a constant object id, which means every time you refer to the symbol, you are referring to the same object. This is great for many reasons; for starters, the symbol will only take up a tiny piece of memory in your program. On the other hand, if you write the same string many times, you will end up with multiple objects which have different object ids. This is confusing, and it makes your program more complicated than it needs to be. In this context, symbols are particularly useful if you are referring to the same key repeatedly. For example, if you had many people stored in a "Person" hash, and they all have the same key values such as :name, :age, and :gender.</p>
 
           <p class="blog-img"><img src="../imgs/hash-key-value.png" at="hash-key-value"/></p>
 
