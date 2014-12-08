@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Ruby Fundamentals - Objects</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Bitter'>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <p class="name">A Tale of Two Variables</p>
+        <p class="subheader">But Only One Object</p>
+        <p class="date">7 December 2014</p>
+
+        <div class="horizontal"></div>
+
+        <nav_main>
+          <ul class="center-it">
+            <li><a href="http://cariwest.github.io/">Home</a></li>
+            <li><a href="$">Projects</a></li>
+            <li><a href="http://cariwest.github.io/cariwest-blogs.html">Blog</a></li>
+            <li><a href="$">Contact</a></li>
+          </ul>
+        </nav_main>
+
+        <div class="horizontal"></div>
+      </header>
+
+      <div class="content">
+        <blogs-list>
+          <p><span>Blog Posts</span>
+            <ul>
+              <li><a href="http://cariwest.github.io/blog/t1-git-blog.html">What is Git? And Why Should You Care?</a></li>
+              <li><a href="http://cariwest.github.io/blog/c1-chefs-kitchen.html">Too Many Cooks: You Only Live Once</a></li>
+              <li><a href="http://cariwest.github.io/blog/t2-css-design.html">Positioning: The Kama Sutra of CSS</a></li>
+              <li><a href="http://cariwest.github.io/blog/t3-arrays-hashes.html">Arrays and Hashes: Which Should You Use?</a></li>
+              <li><a href="http://cariwest.github.io/blog/c3-thinking-style.html">On Astounding Myself: Maintaining a Growth Mindset</a></li>
+              <li><a href="http://cariwest.github.io/blog/ruby-fundamentals.html">A Tale of Two Variables - But Only One Object</a><li>
+            </ul>
+          </p>
+        </blogs-list>
+
+        <blog-post>
+          <p>Once upon a time, I was writing a method, and I was having trouble with the variables. My friend said "Just use the .dup method," and my method worked - but I had no idea why, no matter how my friend tried to explain why it was necessary. After reading "The Well-Grounded Rubyist," though, a light bulb went off. I get it now.</p>
+
+          <p><span>The issue, I realize, is that I've been thinking about objects from the wrong side of the = symbol.</span></p>
+
+          <p>To delve into this problem, let's create a string object.</p>
+
+          <p class="blog-img"><img src="../imgs/defining-object.png" alt="defining-object"/></p>
+
+          <p>In the example above, the object is the string. It is on the right hand side. The object is not the variable. I don't know how many different ways I heard or read this information when I was teaching myself Ruby, but somehow it never clicked. But look again - <i>the object is on the right hand side.</i></p>
+
+          <p>Of course, the way we manipulate objects can be a little misleading in this regard. For example, when you want to know the object's id (a unique identifier which each object has), you ask the variable to get the information for you.</p>
+
+          <p class="blog-img"><img src="../imgs/ask-id.png" alt="ask-id"/></p>
+
+          <p><span>A Tale of Two Variables - But Only One Object</span></p>
+
+          <p>Okay, so we know the object id. Why is that important? Well, what if you assigned a different variable the <i>same</i> string? You can assign a new variable to the same string using the variable you already have. This will cause your new variable to point to the same object. You can tell this is true when you look at the object id, which is the same.</p>
+
+          <p class="blog-img"><img src="../imgs/other-variable-assignment.png" alt="other-variable-assignment"/></p>
+
+          <p>See? Do you get it?! They're the same! Both string_variable and other_variable are pointing to the same object. This is a smart feature of Ruby's design, because it means that Ruby doesn't make multiple copies of the same object. That would be a waste of programming space.</p>
+
+          <p><span>Reassigning Variables</span></p>
+
+          <p>But wait, there's more! As long as a variable points to that object, it remains the same. If you reassign one of the variables, it will merely point to a different object.</p>
+
+          <p class="blog-img"><img src="../imgs/changing-one-variable.png" alt="changing-one-variable"/></p>
+
+          <p>As you can see, other_variable still points to the same object (as evidenced by the object id), but string_variable now points to a different object.</p>
+
+          <p>Here's another way to look at it. Imagine that you and your friend are attending a weird psychology study, and you are assigned a task: you must point at the pysical object you are told to point to by an Operator - but you can only change what you're pointing to when the Operator addresses you directly. The Operator tells your friend to point at the table. The Operator tells you to point at the same thing your friend is pointing at, so you point at the table. Now the Operator tells your friend to point at the chair. The Operator hasn't addressed you, so you are still pointing at the table. In this scenario, you and your friend are variables, while the table and the chair are objects. I could go on and on with this analogy (I haven't even explained how methods worked!), but I think the gist of it is pretty clear.</p>
+
+          <p><span>Replacing an Object</span></p>
+
+          <p>So, say you want to replace the object with something else, but you want keep the same object id? You can do that with the replace method!</p>
+
+          <p class="blog-img"><img src="../imgs/replacing-object.png" alt="replacing-object"/></p>
+
+          <p>It's pretty sneaky, hmm? This can be useful if you want to change the object but you want to keep the object ID. Of course, if two variables are pointing to the same object, keep in mind that replacing the object will change the object for <i>both</i> variables.</p>
+
+          <p><span>There's so much more to learn...</span></p>
+
+          <p>Unfortunately, we've fulfilled the scope of this blog post. However, Objects are so much more nuanced than what I've covered. I highly recommend reading "The Well-Grounded Rubyist" by David Black for a more thorough and nuanced discussion of Objects.</p>
+
+          <hr>
+
+          <p>*Please note: if all variables are reassigned and nothing is pointing at the object, Ruby will decide to "forget" it's there. If the object is not being used, Ruby has no need to store it in the memory. If you recreate the object, it will then have a new object id.</p>
+        </blog-post>
+      </div>
+
+      <footer>
+        <div class="horizontal"></div>
+
+        <ul class="center-it">
+          <li><a href="https://github.com/CariWest"><img src="../imgs/github.png" alt="github"/></a></li>
+          <li><a href="https://twitter.com/CariWest"><img src="../imgs/twitter.png" alt="twitter"/></a></li>
+          <li><a href="https://www.linkedin.com/in/cariwestbrook"><img src="../imgs/linkedin.png" alt="linkedin"/></a></li>
+          <li><a href="https://www.facebook.com/abinikai"><img src="../imgs/facebook.png" alt="facebook"/></a></li>
+          <li><a href="https://plus.google.com/u/0/108109738030463976912"><img src="../imgs/google.png" alt="google"/></a></li>
+        </ul>
+        <!-- Social media icons courtesy of https://www.iconfinder.com/zlaten -->
+      </footer>
+    </div>
+  </body>
+</html>
