@@ -59,6 +59,10 @@ p a {
   text-decoration: underline;
 }
 
+a:hover img: {
+  transform: rotate(-45deg)
+}
+
 span {
   color: #F2DCC2;
   font-size: 1.5em;
