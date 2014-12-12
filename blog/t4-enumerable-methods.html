@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Illuminating Enumerating</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Bitter'>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <p class="name">Illuminating Enumerating</p>
+        <p class="subheader">A Powerful Class!</p>
+        <p class="date">11 December 2014</p>
+
+        <div class="horizontal"></div>
+
+        <nav_main>
+          <ul class="center-it">
+            <li><a href="http://cariwest.github.io/">Home</a></li>
+            <li><a href="$">Projects</a></li>
+            <li><a href="http://cariwest.github.io/cariwest-blogs.html">Blog</a></li>
+            <li><a href="$">Contact</a></li>
+          </ul>
+        </nav_main>
+
+        <div class="horizontal"></div>
+      </header>
+
+      <div class="content">
+        <blogs-list>
+          <p><span>Blog Posts</span>
+            <ul>
+              <li><a href="http://cariwest.github.io/blog/t1-git-blog.html">What is Git? And Why Should You Care?</a></li>
+              <li><a href="http://cariwest.github.io/blog/c1-chefs-kitchen.html">Too Many Cooks: You Only Live Once</a></li>
+              <li><a href="http://cariwest.github.io/blog/t2-css-design.html">Positioning: The Kama Sutra of CSS</a></li>
+              <li><a href="http://cariwest.github.io/blog/t3-arrays-hashes.html">Arrays and Hashes: Which Should You Use?</a></li>
+              <li><a href="http://cariwest.github.io/blog/c3-thinking-style.html">On Astounding Myself: Maintaining a Growth Mindset</a></li>
+            </ul>
+          </p>
+        </blogs-list>
+
+        <blog-post>
+          <p><span>We Get It. Enumerable is Confusing.</span></p>
+          <p>When learning how to code in Ruby, I would say that Enumerable is one of the most daunting classes in existence. It's already daunting enough to attempt to understand the very technical language in which the Ruby docs are written - but the Enumerables class takes that confusion to a whole new level.</p>
+
+          <p>However, the more I've learned about Ruby over the last two weeks, the more I realize that Enumerable is one of the most powerful classes that Ruby has to offer. Weilding Enumerable is sometimes like being a magician: all the complicated stuff happens behind the scenes, but the audience sees some mind-blowing results.</p>
+
+          <p><span>Enumerable Only Works with Classes with Each</span></p>
+          <p>One of the things which isn't immediately apparent about Enumerable is that it only works with classes which provide an each method. This is because Enumerable, by nature, goes through an object piece by piece. If there is no clear piece to iterate through, then Enumerable doesn't know how to treat the object. Two classes that meet this criteria include (but are not limited to) Array and Hash.</p>
+
+          <p>"But how do I use enumerable on a string?" you ask? At least, that's what I asked myself repeatedly this week. Well, that's easy - you break it up into an Array or Hash based on your needs. You merely need to figure out what criteria you use to break apart the string. Two good options are split and slice, which allow you to break apart the string in different ways.</p>
+
+          <p><span>But How do I use Enumerable?</span></p>
+          <p>So you have an object on which you can use Enumerable. What next?</p>
+
+          <p>First, keep in mind that Enumerable goes through <i>each</i> element in your object. Next, look through your Ruby Docs keeping in mind your goal. Let's look at an example.</p>
+
+          <p>Let's say we have an array full of tasty things:</p>
+          <p class="blog-img"><img src="../imgs/i-like-array.png" alt="i-like-array" /></p>
+
+          <p>Great! Well, this is great for our own reference. But your friend emails you because your birthday is coming up and she'd like to make you something tasty (you have good friends). You could email her this array, but that's a little rude - it's polite to use complete sentences, especially when she's doing something so nice for you. But how do you print out this array nicely?</p>
+
+          <p>You could print all these items out with an each method, and it might look like this:</p>
+          <p class="blog-img"><img src="../imgs/prints-with-each.png" alt="prints-with-each" /></p>
+
+          <p>But what if you used an Enumerable method? This assumes that you are iterating through each element in the array. Let's look at the same method using map.</p>
+          <p class="blog-img"><img src="../imgs/prints-with-map.png" alt="prints-with-map" /></p>
+
+          <p>"But that does the exact same thing with the same amount of effort?!" you say! </p>
+
+          <p>Well, yes. But this example is pretty straightforward! Let's look at something more complex.</p>
+
+          <p><span>Enumerable Allows for Complexity</span></p>
+
+          <p>One of the cool things about Enumerable is that you can easily do a fairly complex calculation very quickly. For example, let's say you don't want to overwhelm her, so you only want to print the first two options. There's a really handy Enumerable method for that called first! Let's look at how to use it and then talk about the method we've created.</p>
+
+          <p class="blog-img"><img src="../imgs/prints-with-map.png" alt="prints-with-map" /></p>
+
+          <p>Look at how classy that is! In this snazzy little method, we've taken the first two elements in the array and printed it out using map (we also could have used each, of course, since they're very similar). If you did this without the first method, you would have to use an iterator method or a loop - but with the first method, the method goes so smoothly!</p>
+
+          <p><span>Your Turn!</p></span>
+
+          <p>Now that you see the power of the Enumerable class, go take a closer look! What pre-built methods could help you accomplish complex tasks quickly? As you're becomming familiar with Enumerable, keep in mind that irb is your friend: if you don't quite understand it, test out the method in your virtual playground.</p>
+
+        </blog-post>
+      </div>
+
+      <footer>
+        <div class="horizontal"></div>
+
+        <ul class="center-it">
+          <li><a href="https://github.com/CariWest"><img src="../imgs/github.png" alt="github"/></a></li>
+          <li><a href="https://twitter.com/CariWest"><img src="../imgs/twitter.png" alt="twitter"/></a></li>
+          <li><a href="https://www.linkedin.com/in/cariwestbrook"><img src="../imgs/linkedin.png" alt="linkedin"/></a></li>
+          <li><a href="https://www.facebook.com/abinikai"><img src="../imgs/facebook.png" alt="facebook"/></a></li>
+          <li><a href="https://plus.google.com/u/0/108109738030463976912"><img src="../imgs/google.png" alt="google"/></a></li>
+        </ul>
+        <!-- Social media icons courtesy of https://www.iconfinder.com/zlaten -->
+      </footer>
+    </div>
+  </body>
+</html>
