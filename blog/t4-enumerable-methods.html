@@ -38,7 +38,6 @@
               <li><a href="http://cariwest.github.io/blog/t2-css-design.html">Positioning: The Kama Sutra of CSS</a></li>
               <li><a href="http://cariwest.github.io/blog/t3-arrays-hashes.html">Arrays and Hashes: Which Should You Use?</a></li>
               <li><a href="http://cariwest.github.io/blog/c3-thinking-style.html">On Astounding Myself: Maintaining a Growth Mindset</a></li>
-              <li><a href="http://cariwest.github.io/blog/t4-enumerable-methods.html">On Astounding Myself: Maintaining a Growth Mindset</a></li>
               <li><a href="http://cariwest.github.io/blog/ruby-fundamentals.html">A Tale of Two Variables - But Only One Object</a></li>
               <li><a href="http://cariwest.github.io/blog/t4-enumerable-methods.html">Illuminating Enumerable: A Powerful Class!</a></li>
               <li><a href="http://cariwest.github.io/blog/c4-tech-issues.html">Buggy Technology: Is it Inevitable?</a></li>
@@ -63,25 +62,29 @@
           <p>First, keep in mind that Enumerable goes through <i>each</i> element in your object. Next, look through your Ruby Docs keeping in mind your goal. Let's look at an example.</p>
 
           <p>Let's say we have an array full of tasty things:</p>
-          <p class="blog-img"><img src="../imgs/desserts-array.png" alt="desserts-array" /></p>
+          <p class="blog-img"><img src="../imgs/t4-desserts-array.png" alt="desserts-array" /></p>
 
           <p>Great! Well, this is great for our own reference. But your friend emails you because your birthday is coming up and she'd like to make you something tasty (you have good friends). You could email her this array, but that's a little rude - it's polite to use complete sentences, especially when she's doing something so nice for you. But how do you print out this array nicely?</p>
 
           <p>You could print all these items out with an each method, and it might look like this:</p>
-          <p class="blog-img"><img src="../imgs/prints-with-each.png" alt="prints-with-each" /></p>
+          <p class="blog-img"><img src="../imgs/t4-prints-with-each.png" alt="prints-with-each" /></p>
 
           <p>But what if you used an Enumerable method? This assumes that you are iterating through each element in the array. Let's look at the same method using map.</p>
-          <p class="blog-img"><img src="../imgs/prints-with-map.png" alt="prints-with-map" /></p>
+          <p class="blog-img"><img src="../imgs/t4-prints-with-map.png" alt="prints-with-map" /></p>
 
           <p>"But that does the exact same thing with the same amount of effort?!" you say! </p>
 
-          <p>Well, yes. But this example is pretty straightforward! Let's look at something more complex.</p>
+          <p>Well, yes — it appears that way. But if you run these methods in irb and look at the returned values, you'll see something quite different. The each method returns the array which was originally fed into the method. The map method, on the other hand, returns an array of the <i>results</i>. Thus, because we used puts in this method, the returned value of the enumerable method will be nil.</p>
+
+          <p class="blog-img"><img src="../imgs/t4-return-values.png" alt="return-values" /></p>
+
+          <p>But wait, there's more! This example is pretty straightforward! Let's look at something more complex.</p>
 
           <p><span>Enumerable Allows for Complexity</span></p>
 
           <p>One of the cool things about Enumerable is that you can easily do a fairly complex calculation very quickly. For example, let's say you don't want to overwhelm her, so you only want to print the first two options. There's a really handy Enumerable method for that called first! Let's look at how to use it and then talk about the method we've created.</p>
 
-          <p class="blog-img"><img src="../imgs/prints-with-map.png" alt="prints-with-map" /></p>
+          <p class="blog-img"><img src="../imgs/t4-prints-first-two.png" alt="prints-first-two" /></p>
 
           <p>Look at how classy that is! In this snazzy little method, we've taken the first two elements in the array and printed it out using map (we also could have used each, of course, since they're very similar). If you did this without the first method, you would have to use an iterator method or a loop - but with the first method, the method goes so smoothly!</p>
 
