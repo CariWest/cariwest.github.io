@@ -53,19 +53,24 @@
 
           <p>To delve into this problem, let's create a string object.</p>
 
-          <p class="blog-img"><img src="../imgs/defining-object.png" alt="defining-object"/></p>
+          <pre>string_variable = "string object"
+=> "string object"</pre>
 
           <p>In the example above, the object is the string. It is on the right hand side. The object is not the variable. I don't know how many different ways I heard or read this information when I was teaching myself Ruby, but somehow it never clicked. But look again - <i>the object is on the right hand side.</i></p>
 
           <p>Of course, the way we manipulate objects can be a little misleading in this regard. For example, when you want to know the object's id (a unique identifier which each object has), you ask the variable to get the information for you.</p>
 
-          <p class="blog-img"><img src="../imgs/ask-id.png" alt="ask-id"/></p>
+          <pre>string_variable.object_id
+=> 700980975920</pre>
 
           <p><span>A Tale of Two Variables - But Only One Object</span></p>
 
           <p>Okay, so we know the object id. Why is that important? Well, what if you assigned a different variable the <i>same</i> string? You can assign a new variable to the same string using the variable you already have. This will cause your new variable to point to the same object. You can tell this is true when you look at the object id, which is the same.</p>
 
-          <p class="blog-img"><img src="../imgs/other-variable-assignment.png" alt="other-variable-assignment"/></p>
+          <pre>other_variable = string_variable
+=> "string object"
+other_variable.object_id
+=> 700980975920</pre>
 
           <p>See? Do you get it?! They're the same! Both string_variable and other_variable are pointing to the same object. This is a smart feature of Ruby's design, because it means that Ruby doesn't make multiple copies of the same object. That would be a waste of programming space.</p>
 
@@ -73,7 +78,12 @@
 
           <p>But wait, there's more! As long as a variable points to that object, it remains the same. If you reassign one of the variables, it will merely point to a different object.</p>
 
-          <p class="blog-img"><img src="../imgs/changing-one-variable.png" alt="changing-one-variable"/></p>
+          <pre>string_variable = "Hello World"
+=> "Hello World"
+puts "string_variable: #{string_variable.object_id}"
+=> string_variable: 70098098671640
+puts "other_variable: #{other_variable.object_id}"
+=> 700980975920</pre>
 
           <p>As you can see, other_variable still points to the same object (as evidenced by the object id), but string_variable now points to a different object.</p>
 
@@ -83,7 +93,10 @@
 
           <p>So, say you want to replace the object with something else, but you want keep the same object id? You can do that with the replace method!</p>
 
-          <p class="blog-img"><img src="../imgs/replacing-object.png" alt="replacing-object"/></p>
+          <pre>other_variable.replace("updated string object")
+=> "updated string object"
+other_variable.object_id
+=> 700980975920</pre>
 
           <p>It's pretty sneaky, hmm? This can be useful if you want to change the object but you want to keep the object ID. Of course, if two variables are pointing to the same object, keep in mind that replacing the object will change the object for <i>both</i> variables.</p>
 
