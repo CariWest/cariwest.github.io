@@ -56,50 +56,157 @@
           <p>The first thing to consider when setting up a Class is what, exactly, you'll be trying to model. For example, let's make a class which models our pets. Let's say we have a dog and two cats. However, a general Pets class is poor organization - the only attributes your pets really have in common are that they all have names, ages, and breeds. It would be best to create a super-class of Pets, and then create a sub-class for each species.</p>
 
           <p>To do this, we'll use inheritence. The Dog class and the Cat class will inherit from the Pets class using the "<" operator in the class definition.</p>
-          <p class="blog-img"><img src="../imgs/t5-pets-classes.png" alt="pets-classes"/></p>
+
+          <pre>class Pets
+end
+
+class Dogs < Pets
+end
+
+class Cats < Pets
+end</pre>
 
           <p><span>Organizing Basic Methods</span></p>
 
           <p>Once we've set up the inheritence, we can start defining the attributes of each class. We want to make sure that the most general information goes in the Pets class. These are the attributes which all pets have.</p>
 
           <p>In the subclasses, we'll then set up attributes which only some pets have. It's important to note that the initialization method should go in the superclass; if you also write an initialization method in the subclass, you will overwrite the method in the superclass.</p>
-          <p class="blog-img"><img src="../imgs/t5-pets-attributes.png" alt="pets-attributes"></p>
+
+          <pre>class Pets
+  attr_reader :age, :breed
+  attr_accessor :name
+
+  def initialize(name, breed, age)
+    @name = name
+    @age = age
+    @breed = breed
+  end
+
+  def print_info
+    "#{@name} is a #{@age} year old #{@breed}."
+  end
+end
+
+class Dogs < Pets
+end
+
+class Dogs < Pets
+end</pre>
 
           <p>Here, you can see that we've separated the data based on what attributes all pets have. All of these attribute variables are set up as instance variables, as indicated by the @ symbol at the beginning of the variable name; this is becuase they are being accessed by different methods in the Class. If you have any variables which are only applicable to the method itself, you could write the variable without the @ symbol. You'll also note that we've used Attribute Methods to define some pre-set methods. These methods help us access and set attributes of our objects.</p>
 
           <p>It's important to consider what Attribute Methods you wish to use based on what information is immutable versus the information the user should be able to change. For example, breed is immutable; thus, we use attr_reader to establish a method which will retrieve that information from a class instance. On the other hand, an owner can choose to change a pet's name on a whim. As such, we use attr_accessor to set up this attribute, which will allow us to both retrieve the information and change the information.</p>
 
           <p>Finally, we've also created a method which can print the basic information about your pets. Let's call some methods and look at the output so we can understand what's going on.</p>
-          <p class="blog-img"><img src="../imgs/t5-establish-pets.png" alt="establish-pets"/></p>
+
+          <pre>moby = Dog.new("Moby", "border collie", 1)
+tricky = Cat.new("Tricky", "tabby", 7)
+puts moby.print_info
+puts tricky.print_info
+puts
+moby.name = "Moby Dick"
+puts "Please address my dog by his full name, #{moby.name}."
+puts moby.print_info</pre>
 
           <p>And the output will be:</p>
-          <p class="blog-img"><img src="../imgs/t5-pets-output.png" alt="pets-output"/></p>
+          <pre>=> Moby is a 1 year old border collie.
+=> Tricky is a 7 year old tabby.
+
+=> Please address my dog by his full name, Moby Dick.
+=> Moby Dick is a 1 year old border collie.</pre>
 
           <p><span>Organizing Specific Methods</span></p>
 
           <p>Now that the basic information is in place, it's time to add some more specific methods. Let's describe some tricks our pets can do!</p>
-          <p class="blog-img"><img src="../imgs/t5-tricks.png" alt="tricks"/></p>
+
+          <pre>class Dog < Pets
+  def sit
+    @trick = "sitting"
+  end
+
+  def down
+    @trick = "lying down"
+  end
+end
+
+class Cat < Pets
+  def sit
+    @trick = "glaring at you"
+  end
+
+  def down
+    @trick = "glaring at you"
+  end
+end</pre>
 
           <p>Great! Our pets know some tricks. Before we go any further, though, let's create a method which will print out what our pet is doing. This method should go in the Pets class since it can be used for either a cat or a dog.</p>
-          <p class="blog-img"><img src="../imgs/t5-print-trick-method.png" alt="print-trick-method"/></p>
+
+          <pre>class Pets
+  attr_reader :age, :breed
+  attr_accessor :name
+
+  def initialize(name, breed, age)
+    @name = name
+    @age = age
+    @breed = breed
+  end
+
+  def print_info
+    "#{@name} is a #{@age} year old #{@breed}."
+  end
+
+  def print_trick
+    "#{@name} is #{@trick}."
+  end
+end</pre>
 
           <p>Now we call call the methods and see what they do.</p>
-          <p class="blog-img"><img src="../imgs/t5-call-tricks.png" alt="call-tricks"/></p>
-          <p class="blog-img"><img src="../imgs/t5-tricks-output.png" alt="tricks-output"/></p>
+
+          <pre>moby.sit
+moby.print_trick
+tricky.sit
+tricky.print_trick
+
+=> Moby Dick is sitting.
+=> Tricky is glaring at you.</pre>
 
           <p>Excellent! These methods work, and it's clear what is going on. However, the set-up is still a little clunky. It would be nice if we could chain these methods together.</p>
 
           <p><span>Chaining Methods</span></p>
 
-          <p>The ability to chain methods together is one of the greatest strengths of Ruby. However, if we tried to chain the methods together right now, this is what would happen:</p>
-          <p class="blog-img"><img src="../imgs/t5-chain-fail.png" alt="chain-fail"/></p>
-          <p class="blog-img"><img src="../imgs/t5-chain-output-fail.png" alt="chain-output-fail"/></p>
+          <p>The ability to chain methods together is one of the greatest strengths of Ruby. However, if we tried to chain the methods together right now, you'd get a NoMethodError! To chain methods together, we have one more step - but it's so easy! All you need to do is ensure that the methods which can be chained return "self."</p>
 
-          <p>To chain methods together, we have one more step - but it's so easy! All you need to do is ensure that the methods which can be chained return "self."</p>
-          <p class="blog-img"><img src="../imgs/t5-returning-self.png" alt="returning-self"/></p>
+          <pre>class Dog < Pets
+  def sit
+    @trick = "sitting"
+    self
+  end
+
+  def down
+    @trick = "lying down"
+    self
+  end
+end
+
+class Cat < Pets
+  def sit
+    @trick = "glaring at you"
+    self
+  end
+
+  def down
+    @trick = "glaring at you"
+    self
+  end
+end</pre>
 
           <p>Now the methods will succeed when we chain them together.</p>
-          <p class="blog-img"><img src="../imgs/t5-chaining-success.png" alt="chaining-success"/></p>
+
+          <pre>puts moby.sit.print_trick
+puts tricky.sit.print_trick
+
+=> Moby Dick is sitting.
+=> Tricky is glaring at you.</pre>
 
           <p>Remember that not every method should return "self" - only the ones which you would like to feed directly into another method. In this case, the tricks need to return self, but the print_tricks method does not.</p>
 

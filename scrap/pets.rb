@@ -47,12 +47,18 @@ end
 
 moby = Dog.new("Moby", "border collie", 1)
 tricky = Cat.new("Tricky", "tabby", 7)
-# puts moby.print_info
-# puts tricky.print_info
+puts moby.print_info
+puts tricky.print_info
 
 moby.name = "Moby Dick"
-# puts "Please address my dog by his full name, #{moby.name}."
-# puts moby.print_info
+puts "Please address my dog by his full name, #{moby.name}."
+puts moby.print_info
+
+moby.sit
+moby.print_trick
+tricky.sit
+tricky.print_trick
+
 
 puts moby.sit.print_trick
 puts tricky.sit.print_trick

@@ -21,29 +21,11 @@ footer {
   width: 98%;
 }
 
-blogs-list {
-  width: 30%;
-  float: left;
-  margin-left: 2em;
-}
-
-blog-post {
-  width: 50%;
-  float: left;
-  margin-left: 5%;
-}
-
-picture {
-  float: left;
-  margin-left: 15%;
-  margin-top: 5%;
-}
-
-welcome {
-  float: left;
-  width: 50%;
-  margin-left: 5%;
-  margin-top: 5%;
+pre {
+  background-color: black;
+  color: gray;
+  margin: 0em;
+  padding: 1em;
 }
 
 a {
@@ -70,6 +52,31 @@ span {
 
 strong {
   color: #F2DCC2;;
+}
+
+blogs-list {
+  width: 30%;
+  float: left;
+  margin-left: 2em;
+}
+
+blog-post {
+  width: 50%;
+  float: left;
+  margin-left: 5%;
+}
+
+picture {
+  float: left;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+welcome {
+  float: left;
+  width: 50%;
+  margin-left: 5%;
+  margin-top: 5%;
 }
 
 nav_main ul li {
