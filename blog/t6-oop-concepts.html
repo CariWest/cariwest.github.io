@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Class vs. Instance Methods</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Bitter'>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <p class="name">Class vs. Instance Methods</p>
+        <p class="subheader">On the State of Objects</p>
+        <p class="date">11 January 2015</p>
+
+        <div class="horizontal"></div>
+
+        <nav_main>
+          <ul class="center-it">
+            <li><a href="http://cariwest.github.io/">Home</a></li>
+            <li><a href="$">Projects</a></li>
+            <li><a href="http://cariwest.github.io/cariwest-blogs.html">Blog</a></li>
+            <li><a href="$">Contact</a></li>
+          </ul>
+        </nav_main>
+
+        <div class="horizontal"></div>
+      </header>
+
+      <div class="content">
+        <blogs-list>
+          <p><span>Blog Posts</span>
+            <ul>
+              <li><a href="http://cariwest.github.io/blog/t1-git-blog.html">What is Git? And Why Should You Care?</a></li>
+              <li><a href="http://cariwest.github.io/blog/c1-chefs-kitchen.html">Too Many Cooks: You Only Live Once</a></li>
+              <li><a href="http://cariwest.github.io/blog/t2-css-design.html">Positioning: The Kama Sutra of CSS</a></li>
+              <li><a href="http://cariwest.github.io/blog/t3-arrays-hashes.html">Arrays and Hashes: Which Should You Use?</a></li>
+              <li><a href="http://cariwest.github.io/blog/c3-thinking-style.html">On Astounding Myself: Maintaining a Growth Mindset</a></li>
+              <li><a href="http://cariwest.github.io/blog/ruby-fundamentals.html">A Tale of Two Variables - But Only One Object</a></li>
+              <li><a href="http://cariwest.github.io/blog/t4-enumerable-methods.html">Illuminating Enumerable: A Powerful Class!</a></li>
+              <li><a href="http://cariwest.github.io/blog/c4-tech-issues.html">Buggy Technology: Is it Inevitable?</a></li>
+              <li><a href="http://cariwest.github.io/blog/t5-ruby-classes.html">Class Organization: The Basics</a></li>
+              <li><a href="http://cariwest.github.io/blog/c5-feedback.html">Pairing and Feedback: A Learning Feedback Loop</a></li>
+              <li><a href="http://cariwest.github.io/blog/t6-oop-concepts.html">Class vs. Instance Methods: On the State of Objects</a></li>
+            </ul>
+          </p>
+        </blogs-list>
+
+        <blog-post>
+          <p><span><!-- All Blog Subheaders in a span --></span></p>
+          <p>Methods are incredibly useful. They allow us to perform an action in the programming world. If objects are the sandwiches of the world, then methods are the tools with which we modify the sandwich from a mediocre PB&J to a multi-layer beast which Dagwood would be proud to eat.</p>
+
+          <p>When creating methods, there are two main types of methods to consider: class methods and instance methods. Simply, class methods act on the class itself; instance methods act upon an instance of the class. Both types of methods have pros and cons. First, though, let's understand the differences of the syntax and implementation between class and instance methods.</p>
+
+          <p><span>Creating and Implementing Class Methods</span></p>
+
+          <p>There are many different ways to create a class method. Here are the two most common:</p>
+
+          <pre>class SayingHello
+
+  def self.hello1
+    puts "The class says hello from method 1."
+  end
+
+  class << self
+    def hello2
+      puts "The class says hello from method 2."
+    end
+  end
+end
+
+SayingHello.hello1
+SayingHello.hello2
+
+### OUTPUT ###
+The class says hello from method 1.
+The class says hello from method 2.</pre>
+
+          <p>Pretty straightforward, right? The first method is a little easier to read for one method, but the second method is especially useful when defining multiple class methods within a class, making it DRY-friendly.</p>
+
+          <p><span>Creating and Implementing Instance Methods</span></p>
+
+          <p>An instance method is one of the most popular ways to create a method in Ruby. As such, it doesn't need much explanation. Regardless, here is an example so you can compare syntax.</p>
+
+          <pre>class SayingHello
+  def hello
+    puts "An instance of the class says hello."
+  end
+end
+
+example = SayingHello.new
+example.hello
+
+### OUTPUT ###
+An instance of the class says hello.</pre>
+
+          <p><span>Comparing the Syntax of Class and Instance Methods</span></p>
+
+          <p>It's pretty easy to see why the above methods work, but it's sometimes difficult to compare the syntax. Here's an example of Class and Instance methods side-by-side:</p>
+
+          <pre>class SayingHello
+
+  def self.hello      # class method
+    puts "The class says hello."
+  end
+
+  def hello           # instance method
+    puts "An instance of the class says hello."
+  end
+
+end
+
+SayingHello.hello                     # using the class method
+instance_hello = SayingHello.new      # creating an instance
+instance_hello.hello                  # instance method
+
+### OUTPUT ###
+The class says hello.
+An instance of the class says hello.</pre>
+
+          <p>As you can see, the class method acts directly on the class. Conversely, an instance method only works on an instance of the class; thus, you must create an instance (SayingHello.new) to use these methods.</p>
+
+          <p>It's important to note that any information used in a class method must be passed through the method itself. Conversely, an instance of the class can accept information through both the initialization method and any instance method.</p>
+
+          <pre>class SayingHello
+
+  def initialize(person)
+    @person = person
+  end
+
+  def self.hello(person)
+    puts "#{person} says hello from the class."
+  end
+
+  def hello
+    puts "#{@person} says hello from an instance of the class."
+  end
+
+  def hello_special(type = nil)
+    case type
+    when "english"
+      puts "#{@person} says it is a pleasure to meet you."
+    when "australian"
+      puts "#{@person} says 'G'day, mate!"
+    when "pirate"
+      puts "#{@person} says 'Arrrrrrrr!'"
+    else
+      puts "#{@person} says hello."
+    end
+  end
+end
+
+SayingHello.hello("Cari")
+cari = SayingHello.new("Cari")
+cari.hello
+cari.hello_special("pirate")
+
+### OUTPUT ###
+Cari says hello from the class.
+Cari says hello from an instance of the class.
+Cari says 'Arrrrrrrr!'</pre>
+
+          <p><span>Pros and Cons of Class Methods</span></p>
+
+          <p>Class methods are pretty snazzy because they allow you to act immediately. It results in shorter code since there is no need to initialize an object to execute a method. This code can be more straightforward, easier to read, and extremely useful.</p>
+
+          <p>Class methods have many cons, though. If a complex method is necessary, it would be difficult to make a method single-purpose using a class method. Any parameters must be passed directly through the class method, which can be cumbersome as the number of parameters increases.</p>
+
+          <p>In addition, it is almost impossible* to keep track of an instance's state using a class method. This means that class methods require that all information necessary be passed through arguments in the class method. For simple class methods (especially any that require no arguments), this isn't a problem. However, this means that complex methods would be difficult to create because there is no easy way to relay all the information that needs to be passed to complete the action.</p>
+
+          <p>Using class methods emphasizes a procedural-like approach to programming. Since Ruby's strength is in object-oriented programming, this is inefficient and annoying— much like trying to cut your steak with a butter knife.</p>
+
+          <p><span>Pros and Cons of Instance Methods</span></p>
+
+          <p>The main con of an instance method is that it requires initialization of an object to be of any use. If the action is simple, then initialization can result in lengthy and indirect code.</p>
+
+          <p>On the other hand, the greatest strength of an instance method is that it tracks the state of an intialized object. This means that the object's state can and will influence future method calls. The user has to keep track of less information, and DRY & single-purpose code is easier to create.</p>
+
+          <p>Tracking an object's state is important in object-oriented program. It allows you to perform complex actions by calling multiple methods on the same object. If you need to call multiple arguments in a specific order, it means you can call those methods and arguments in a logical and intuitive way. The more complex a class, the more you must be able to track an object's state.</p>
+
+          <p><span>Concluding Thoughts</span></p>
+
+          <p>Both class methods and instance methods have their time and place in Ruby. However, class methods emphasize a procedural-like implementation of Ruby, which can increase maintenance necessary as codebase increases. They are useful when initialization of a class introduces an extra and unnecessary step, but they should be used carefully and sparingly.</p>
+
+          <p>When in doubt, it is probably better to use instance methods. Instance methods allow you to track the state of an object, which allows for more complex classes which are more easily maintained in the long run.</p>
+
+          <hr>
+          <p>*Nothing is impossible. But things which are cumbersome and circuitious should be abandoned as useless, if not quite impossible.</p>
+
+          <hr>
+          <p><span>Resources</span></p>
+          <p><a href="http://www.railstips.org/blog/archives/2009/05/11/class-and-instance-methods-in-ruby/">Class and Instance Methods in Ruby</a>
+          <br><a href="http://mlomnicki.com/programming/ruby/2011/07/20/class-vs-instance-methods.html">Class vs Instance Methods</a></p>
+        </blog-post>
+      </div>
+
+      <footer>
+        <div class="horizontal"></div>
+
+        <ul class="center-it">
+          <li><a href="https://github.com/CariWest"><img src="../imgs/github.png" alt="github"/></a></li>
+          <li><a href="https://twitter.com/CariWest"><img src="../imgs/twitter.png" alt="twitter"/></a></li>
+          <li><a href="https://www.linkedin.com/in/cariwestbrook"><img src="../imgs/linkedin.png" alt="linkedin"/></a></li>
+          <li><a href="https://www.facebook.com/abinikai"><img src="../imgs/facebook.png" alt="facebook"/></a></li>
+          <li><a href="https://plus.google.com/u/0/108109738030463976912"><img src="../imgs/google.png" alt="google"/></a></li>
+        </ul>
+        <!-- Social media icons courtesy of https://www.iconfinder.com/zlaten -->
+      </footer>
+    </div>
+  </body>
+</html>
