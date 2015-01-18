@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Looping: JavaScript vs Ruby</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Bitter'>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <p class="name">Looping</p>
+        <p class="subheader">JavaScript vs Ruby</p>
+        <p class="date">16 January 2015</p>
+
+        <div class="horizontal"></div>
+
+        <nav_main>
+          <ul class="center-it">
+            <li><a href="http://cariwest.github.io/">Home</a></li>
+            <li><a href="$">Projects</a></li>
+            <li><a href="http://cariwest.github.io/cariwest-blogs.html">Blog</a></li>
+            <li><a href="$">Contact</a></li>
+          </ul>
+        </nav_main>
+
+        <div class="horizontal"></div>
+      </header>
+
+      <div class="content">
+        <blogs-list>
+          <p><span>Blog Posts</span>
+            <ul>
+              <li><a href="http://cariwest.github.io/blog/t1-git-blog.html">What is Git? And Why Should You Care?</a></li>
+              <li><a href="http://cariwest.github.io/blog/c1-chefs-kitchen.html">Too Many Cooks: You Only Live Once</a></li>
+              <li><a href="http://cariwest.github.io/blog/t2-css-design.html">Positioning: The Kama Sutra of CSS</a></li>
+              <li><a href="http://cariwest.github.io/blog/t3-arrays-hashes.html">Arrays and Hashes: Which Should You Use?</a></li>
+              <li><a href="http://cariwest.github.io/blog/c3-thinking-style.html">On Astounding Myself: Maintaining a Growth Mindset</a></li>
+              <li><a href="http://cariwest.github.io/blog/ruby-fundamentals.html">A Tale of Two Variables - But Only One Object</a></li>
+              <li><a href="http://cariwest.github.io/blog/t4-enumerable-methods.html">Illuminating Enumerable: A Powerful Class!</a></li>
+              <li><a href="http://cariwest.github.io/blog/c4-tech-issues.html">Buggy Technology: Is it Inevitable?</a></li>
+              <li><a href="http://cariwest.github.io/blog/t5-ruby-classes.html">Class Organization: The Basics</a></li>
+              <li><a href="http://cariwest.github.io/blog/c5-feedback.html">Pairing and Feedback: A Learning Feedback Loop</a></li>
+              <li><a href="http://cariwest.github.io/blog/t6-oop-concepts.html">Class vs. Instance Methods: On the State of Objects</a></li>
+              <li><a href="http://cariwest.github.io/blog/c6-stereotype-threat.html">Stereotype Threat: Women in Coding</a></li>
+              <li><a href="http://cariwest.github.io/blog/t7-JavaScript.html">Looping: JavaScript vs Ruby</a></li>
+              <li><a href="http://cariwest.github.io/blog/c7-values.html">Self-Affirmation: Undermining our Insecurities</a></li>
+            </ul>
+          </p>
+        </blogs-list>
+
+        <blog-post>
+          <p><span>Loops</span></p>
+          <p>Loops are universally one of the most useful aspects of any coding language. Looping allows a programmer to automate a task for as many times as necessary. It reduces the lines in a program, which subsequently reduces the opportunity for programming errors. Like most languages, both Ruby and JavaScript use looping regularly — but the way those loops are structured differs dramatically.</p>
+
+          <p><span>Looping in JavaScript</span></p>
+
+          <p>There are main loops in JavaScript: the while loop, and the for loop. In short, the while loop repeats the same code block until the specified condition becomes false; the for loop repeats the same code block for a specified number of times. A for loop is really just a specialized while loop, where the loop counts your progress and tests the progress against a condition.</p>
+
+          <p>A while loop:</p>
+
+          <pre>i = 1;
+while (i <= 5){
+  console.log("Printing " + i);
+  i++;
+}</pre>
+
+          <p>A for loop:</p>
+
+          <pre>for (i = 1; i <= 5; i++) {
+  console.log("Printing " + i);
+}</pre>
+
+          <p>These loops do the same thing, but the syntax is a little different. You can see that the for loop is a little shorter and more straightforward. All of the elements needed for the for loop's progression (the starting point, the condition for repeating, and the progression). Conversely, the elements of the while loop are spread out over multiple lines of code.</p>
+
+          <p>Of course, a while loop is also useful for loops which aren't controlled by counting. Check out this silly little example, which searches for the first number divisible by three.</p>
+
+          <pre>divisibleByThree = false;
+i = 1;
+
+while (divisibleByThree == false) {
+  if (i % 3 != 0) {
+      console.log(i + " is not divisible by three.");
+      i++;
+  } else {
+    console.log(i + " is divisible by three!");
+    divisibleByThree = true;
+  }
+}</pre>
+
+          <p><span>Looping in Ruby</span></p>
+
+          <p>Like JavaScript, Ruby supports both while and for loops. Unlike JavaScript, Ruby supports many other types of loops which Ruby programmers are welcome to utilize. Every programmer has their preferences, but the loops I use most often in Ruby are #while, #each, and #each_with_index.</p>
+
+          <p>A while loop</p>
+
+          <pre>while i <= 5
+  puts "Printing #{i}"
+  i += 1
+end</pre>
+
+          <p>An each loop</p>
+
+          <pre>array = [1, 2, 3, 4, 5]
+
+array.each { |i| puts "Printing #{i}"}</pre>
+
+          <p>An each_with_index loop</p>
+
+          <pre>array = [1, 2, 3, 4, 5]
+
+array.each_with_index { |i, index| puts "Index #{index}: #{i}" }</pre>
+
+          <p>As you can see, #each and #each_with_index are particularly useful when iterating through arrays. These methods are similarly useful for iterating through hashes.</p>
+
+          <p>The advantage to looping in Ruby is that there are an exceptional number of pre-defined loops at your disposal as a programmer. Many methods which would take lines and lines of coding already exist! A broad familiarity of the methods which already exist will save you time and patience when programming in Ruby.</p>
+
+          <p>It is important to note that while a #for loop does exist in Ruby, it is rarely used. A loop like #times is used more often, which repeats a code block the specified number of times.</p>
+
+          <p><span>JavaScript vs Ruby</span></p>
+
+          <p>It's clear that Ruby has more resources for a programmer in need of loops. However, with some patience, a programmer can create the same types of loops in JavaScript (if it's desired). In the end, it depends on what you want to run and what platform you need to run it on.</p>
+          <p><!-- All blog content in a paragraph --></p>
+          <p><!-- All blog content in a paragraph --></p>
+        </blog-post>
+      </div>
+
+      <footer>
+        <div class="horizontal"></div>
+
+        <ul class="center-it">
+          <li><a href="https://github.com/CariWest"><img src="../imgs/github.png" alt="github"/></a></li>
+          <li><a href="https://twitter.com/CariWest"><img src="../imgs/twitter.png" alt="twitter"/></a></li>
+          <li><a href="https://www.linkedin.com/in/cariwestbrook"><img src="../imgs/linkedin.png" alt="linkedin"/></a></li>
+          <li><a href="https://www.facebook.com/abinikai"><img src="../imgs/facebook.png" alt="facebook"/></a></li>
+          <li><a href="https://plus.google.com/u/0/108109738030463976912"><img src="../imgs/google.png" alt="google"/></a></li>
+        </ul>
+        <!-- Social media icons courtesy of https://www.iconfinder.com/zlaten -->
+      </footer>
+    </div>
+  </body>
+</html>
