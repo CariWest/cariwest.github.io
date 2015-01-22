@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test-Driven Development</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Bitter'>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <p class="name">Test-Driven Development</p>
+        <p class="subheader">Test for Success</p>
+        <p class="date">21 January 2015</p>
+
+        <div class="horizontal"></div>
+
+        <nav_main>
+          <ul class="center-it">
+            <li><a href="http://cariwest.github.io/">Home</a></li>
+            <li><a href="http://cariwest.github.io/projects/index.html">Projects</a></li>
+            <li><a href="http://cariwest.github.io/blog/index.html">Blog</a></li>
+            <li><a href="$">Contact</a></li>
+          </ul>
+        </nav_main>
+
+        <div class="horizontal"></div>
+      </header>
+
+      <div class="content">
+        <blogs-list>
+          <p><span>Blog Posts</span>
+            <ul>
+              <li><a href="http://cariwest.github.io/blog/t1-git-blog.html">What is Git? And Why Should You Care?</a></li>
+              <li><a href="http://cariwest.github.io/blog/c1-chefs-kitchen.html">Too Many Cooks: You Only Live Once</a></li>
+              <li><a href="http://cariwest.github.io/blog/t2-css-design.html">Positioning: The Kama Sutra of CSS</a></li>
+              <li><a href="http://cariwest.github.io/blog/t3-arrays-hashes.html">Arrays and Hashes: Which Should You Use?</a></li>
+              <li><a href="http://cariwest.github.io/blog/c3-thinking-style.html">On Astounding Myself: Maintaining a Growth Mindset</a></li>
+              <li><a href="http://cariwest.github.io/blog/ruby-fundamentals.html">A Tale of Two Variables - But Only One Object</a></li>
+              <li><a href="http://cariwest.github.io/blog/t4-enumerable-methods.html">Illuminating Enumerable: A Powerful Class!</a></li>
+              <li><a href="http://cariwest.github.io/blog/c4-tech-issues.html">Buggy Technology: Is it Inevitable?</a></li>
+              <li><a href="http://cariwest.github.io/blog/t5-ruby-classes.html">Class Organization: The Basics</a></li>
+              <li><a href="http://cariwest.github.io/blog/c5-feedback.html">Pairing and Feedback: A Learning Feedback Loop</a></li>
+              <li><a href="http://cariwest.github.io/blog/t6-oop-concepts.html">Class vs. Instance Methods: On the State of Objects</a></li>
+              <li><a href="http://cariwest.github.io/blog/c6-stereotype-threat.html">Stereotype Threat: Women in Coding</a></li>
+              <li><a href="http://cariwest.github.io/blog/t7-JavaScript.html">Looping: JavaScript vs Ruby</a></li>
+              <li><a href="http://cariwest.github.io/blog/c7-values.html">Self-Affirmation: Undermining our Insecurities</a></li>
+              <li><a href="http://cariwest.github.io/blog/t8-tech.html">Test-Driven Development: Test for Success</a></li>
+            </ul>
+          </p>
+        </blogs-list>
+
+        <blog-post>
+          <p>At Dev Bootcamp, we are incredibly lucky to be exposed to Test-Driven Development (TDD) at such an early stage in our careers as programmers. Test-Driven development is an important development in the world of Software Engineering. When done right, it decreases programming errors, increases progrmaming accuracy, and often speeds up the programming process.</p>
+
+          <p><span>What is Test-Driven Development?</span></p>
+
+          <p>Test-Driven Development is the process of testing a feature before any code is written for the feature. A good test-driven developer <i>always</i> writes a test before he or she writes the code, even if the intended code is really simple.</p>
+
+          <p>Let's look at a really simple example of TDD so that we can talk about it more facilly. In this example of TDD, we will use Driver Test Code to test our expectations using the "==" comparitor. This will compare the output of a method with the expected output of the method. Let's say we want to write a method which prints out "I love that number!" every time we input a valid number.</p>
+
+          <pre>puts method(:love_that_num).arity == 1   # => false</pre>
+
+          <p>Here, #arity tests that the number of arguments which the method love_that_num takes is equal to 1. Once this test fails, we can write the test and watch the tests pass.</p>
+
+          <pre># methods
+def love_that_num(num)
+end
+
+# tests
+puts method(:love_that_num).arity == 1  # => true</pre>
+
+          <p>Whooo! It passes. Once we have done that, we can write our next test(s). For the purpose of our example, our favorite number is always between 7 and 14. We should be able to test both a number which is our favorite and a number which isn't our favorite, so let's write two tests.</p>
+
+          <pre># methods
+def love_that_num(num)
+end
+
+# tests
+puts method(:love_that_num).arity == 1                  # => true
+puts love_that_num(13) == "I love that number!"         # => false
+puts love_that_num(2) == "That is a terrible number."   # => false</pre>
+
+          <p>Next, we make the test pass by implementing the necessary code.</p>
+
+          <pre># methods
+def love_that_num(num)
+  if num > 7 && num < 14
+    "I love that number!"
+  else
+    "That is a terrible number."
+  end
+end
+
+# tests
+puts method(:love_that_num).arity == 1                  # => true
+puts love_that_num(13) == "I love that number!"         # => true
+puts love_that_num(2) == "That is a terrible number."   # => true</pre>
+
+          <p>Finally, we can refactor the code. When we refactor, all of the tests should still pass. If one of the tests fails, we have a clue to where the error has occured.</p>
+
+          <pre># methods
+def love_that_num(num)
+  num > 7 && num < 14 ? "I love that number!" : "That is a terrible number."
+end
+
+# tests
+puts method(:love_that_num).arity == 1                  # => true
+puts love_that_num(13) == "I love that number!"         # => true
+puts love_that_num(2) == "That is a terrible number."   # => true</pre>
+
+          <p>Excellent. Everything passes! In all, the process for testing should be as follows:
+            <ol>
+              <li>Add a Test.</li>
+              <li>Run the tests. If they pass, return to Step 1; if they fail, proceed to Step 3.</li>
+              <li>Make a little change.</li>
+              <li>Run the tests again. If they pass, go to Step 1; if they fail, repeat Step 3.</li>
+              <li>Once all possible tests pass, development stops.</li>
+            </ol>
+          </p>
+
+          <p><span>The Advantages of Test-Driven Development</span></p>
+
+          <p>I know, I know. This program is really simple, and it would be so much faster to just write the program and then implement the tests. This is the trap of TDD: the urge to write the code first is easy to succumb to, especially if the program is really easy. Then you can write the tests after, just to check that it does everything you expect. This approach is often referred to as traditional testing, where tests are written after the code has been finished so as to test its output.</p>
+
+          <p>However, there are a log of advantages to using TDD which aren't present in traditional testing. First, the nature of TDD ensures that 100% test coverage (meaning a test for every single line of code). While 100% test coverage is recommended with traditional testing, it doesn't always happen. It's easy to miss testing little things. In this example, we might have missed testing that the method accepts only one argument. What if we had been intending to accept no arguments or four arguments? Test-Driven Development ensures that <i>every single line</i> of code is tested.</p>
+
+          <p>In addition, TDD encourages the Agile-Modeling practice of "testing with purpose." This means that every single test (and thus every single feature) aims to move the program forward. This reduces the chance of going down a rabbit hole and implementing a useless feature (no matter how cool it is). It keeps programmers on track by making sure that they always know what the next step should be.</p>
+
+          <p>Test-Driven Development also helps catch errors which might happen as you program new features or refactor old features. Unfortunately, it's pretty easy to break a feature by implementing a new feature. Similarly, it can be easy to break a method when attempting to refactor it for readability, DRY-ness, or single responsibility. The moment a test fails, it offers a clue to what's gone wrong. </p>
+
+          <p><span>Disadvantages of Test-Driven Development</span></p>
+
+          <p>It is only fair to discuss the disadvantages of TDD. First off, it is easy to slip up when using TDD. Some features seem so simple and easily implemented that it is tempting to go ahead and write the code and write a test to make sure it passes. In this way, TDD can be a little counter-intuitive; it can be frustrating to see a test fail before writing the code to make it pass. Once you're used to this as a programmer, however, it can be liberating — every single "pass" indicates a clear measure of success.</p>
+
+          <p>Second, TDD isn't very good for thinking through the bigger issues in a program, such as overall design, how people will use the system, or User Interface design. Test-Driven Development should often be combined with Agile Model-Driven Development (AMDD). This second method of testing is better for conceptualizing & testing overall design. It's also worth noting that TDD is not visually oriented, while AMDD is visually oriented; the combination of these two techniques provides a good balance between the potential needs of programmers.</p>
+
+          <p><span>Good Test-Driven Development Practices</span></p>
+
+          <p>When being a good test-driven developer, there are a few rules & recommendations to follow, as indicated by Kent Beck. Beck wrote <i>eXtreme Programming</i>, which popularized TDD. He indicates that there are two rules: 1) a programmer should only write new code when an automated test has failed, and 2) a programmer should eliminate any duplication he or she encounters.</p>
+
+          <p>There are also some recommendations from Beck on what makes good tests:
+            <ul>
+              <li>the tests should run fast (short setups, runtimes, and breakdowns)</li>
+              <li>each test should run in isolation, meaning you should be able to reorder the tests without affecting the testing process</li>
+              <li>the tests should use data which makes them easy to read and understand from an outside perspective</li>
+              <li>the tests should be able to use real data when they need to</li>
+              <li>each test should represent one step towards your overall goal</li>
+            </ul>
+          </p>
+
+          <p>Test-Driven Development should also consider the following questions:
+            <ul>
+              <li>Is the existing design the best design possible? If yes, implement a new feature. If no, refactor & ensure the tests still pass.</li>
+              <li>Is every feature tested? Make sure that you're writing tests before you write any line of code. Then make sure to run the tests often.</li>
+              <li>What is the purpose of the next test? What is the purpose of the next feature?</li>
+            </ul>
+          </p>
+
+          <p><span>Conclusion</span></p>
+
+          <p>When weilded uniformly, TDD is an incredible tool for creating working code quickly and efficiently. If you ever find yourself asking whether or not it's worth testing in Test-Driven Development, remember this: <b>if it's not worth testing, then what are you building it for?</b></p>
+        </blog-post>
+      </div>
+
+      <footer>
+        <div class="horizontal"></div>
+
+        <ul class="center-it">
+          <li><a href="https://github.com/CariWest"><img src="../imgs/github.png" alt="github"/></a></li>
+          <li><a href="https://twitter.com/CariWest"><img src="../imgs/twitter.png" alt="twitter"/></a></li>
+          <li><a href="https://www.linkedin.com/in/cariwestbrook"><img src="../imgs/linkedin.png" alt="linkedin"/></a></li>
+          <li><a href="https://www.facebook.com/abinikai"><img src="../imgs/facebook.png" alt="facebook"/></a></li>
+          <li><a href="https://plus.google.com/u/0/108109738030463976912"><img src="../imgs/google.png" alt="google"/></a></li>
+        </ul>
+        <!-- Social media icons courtesy of https://www.iconfinder.com/zlaten -->
+      </footer>
+    </div>
+  </body>
+</html>
