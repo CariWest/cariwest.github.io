@@ -20,8 +20,10 @@ a:hover {
    color: blue;
 }
 img {
-    vertical-align: center;
+    display: block;
     width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .centerit {
     margin: auto;
