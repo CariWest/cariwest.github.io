@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Git It Right</title>
+        <link href='../../stylesheets/git-it-right.css' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Domine:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class = "header"><h1>Git It Right</h1></div>
+        <div class = "navbar">
+            <ul class="centerit">
+                <li><a href="http://cariwest.github.io/projects/git-it-right/basics.html">Basics</a></li>
+                <li><a href="http://cariwest.github.io/projects/git-it-right/resources.html">Resources</a></li>
+            </ul>
+        </div>
+        <div class = "content">
+        <hr>
+          <h3>Introduction</h3>
+
+          <p>Git is a version control management system (VCS),  a piece of software that developers can install and run locally on their computers. It allows developers to take snapshots (aka "commits") of their work and track changes to their projects. If you take snapshots of incremental changes, you can also track how your thinking evolves. <b>Commit early. Commit often.</b></p>
+          <p>Most developers use <a href="https://github.com/">Github</a>, a website that allows developers to work on the same Git folders (aka "repositories" or "repos"). Once you publish your repositories on Github, you can collaborate with other people on Github repositories (aka "remote repositories" or "remotes"). You can think about it as a Dropbox for Git.</p>
+
+          <h3>Git Workflow</h3>
+            <img src="../../imgs/git-it-right-workflow.jpg" alt="git workflow chart">
+
+          <h3>Setting up your repository</h3>
+          <p>To make a copy of an existing Git repo, go through the following steps:</p>
+          <ol>
+            <li>Go to the Github page of the remote repo and "fork" your own copy to your own account</li>
+            <li>Navigate to your own account page and click the "clone" button on the right-hand side. (Now the page's "url" should be on your clipboard.) </li>
+            <li>Create a local folder (on your computer) where you want to store your repo</li>
+            <li>Using command line, navigate to that local folder</li>
+            <li>Type the command and paste the "url" between the brackets below (brackets not necessary)<pre>git clone [url]</pre></li>
+          </ol>
+
+         <h3>Publishing Content</h3>
+         <p>To publish a file with content added, go through the following steps:</p>
+          <ol>
+            <li>Check the status of your modified file:<pre>git status</pre></li>
+            <li>Begin tracking the file so that it can be staged for commit:<pre>git add [filename]</pre></li>
+            <li>Commit the file and add comment to help you remember what you were committing:<pre>git commit -m "add message here"</pre></li>
+            <li>You can combine steps 2 and 3 (skip staging) by typing this:<pre>git commit -a -m "add message here"</pre></li>
+          <li>Share your progress on Github:<pre>git push origin master</pre> where [origin] is your cloned remote and [master] is the branch that you have been working on.</li>
+          </ol>
+
+         <h3>Updating Local Repository</h3>
+        <p>To fetch changes made by your teammates (aka "upstream"), go through the following steps:</p>
+          <ol>
+            <li>Check your remote setup:<pre>git remote -v</pre></li>
+            <li>If you don't have your remotes setup:<pre>git remote add "name" [url]</pre></li>
+            <li>Fetch the changes:<pre>git fetch "name"</pre></li>
+            <li>Merge the changes with your local repo:<pre>git merge "name"/master</pre></li>
+            <li>If there is a merge conflict, then open sublime to delete the parts you want to discard and save.</li>
+            <li>Commit and push:<pre>git commit -m "add message here"</pre><pre>git push origin master</pre></li>
+          </ol>
+          <hr>
+        </div>
+        <div class = "footer">
+            <ul>
+                <li><a href="#">Cari Westbrook</a></li>
+                <li><a href="#">Ricky Chen</a></li>
+            </ul>
+            <p>Copyright Cari Westbrook and Ricky Chen, 2015</p>
+        </div>
+    </body>
+</html>

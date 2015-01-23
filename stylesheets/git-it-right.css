@@ -1,0 +1,60 @@
+html {
+    height: 100%;
+    background-color: #FFFFDA;
+    font-family: "Merriweather";
+    font-weight: 300;
+}
+body {
+    height: 100%;
+}
+h1 {
+    font-family: "Domine";
+    font-style: bold;
+    text-align: center;
+}
+a {
+    color: black;
+}
+a:hover {
+   text-decoration: none;
+   color: blue;
+}
+img {
+    vertical-align: center;
+    width: 80%;
+}
+.centerit {
+    margin: auto;
+    text-align: center;
+}
+.content {
+    width: 80%;
+    margin: auto;
+}
+.navbar ul {
+    padding: 0px;
+}
+.navbar ul li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+.footer ul {
+    padding: 0px;
+}
+.footer ul li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+.footer {
+    position: relative;
+    width: 80%;
+    bottom: 0em;
+    margin: auto;
+}
+.footer p {
+    margin-left: 1.5em;
+}
