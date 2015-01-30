@@ -112,3 +112,8 @@ function startDancing(answer) {
 function removeIcon(icon) {
   danceFloor.removeChild(icon);
 }
+
+// the music doesn’t work in chrome for dance with frankie now!
+// the font alson doesn't work in chrome
+// it would be nice to use a template for the music so it only shows up on the action of hitting the band icon! Hmmm...
+// http://blog.teamtreehouse.com/creating-reusable-markup-with-the-html-template-element
