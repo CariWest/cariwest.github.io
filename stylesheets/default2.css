@@ -1,0 +1,106 @@
+* {
+  margin: 0em;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0em;
+  background-color: #F8BC6A;
+}
+
+img {
+  width: 60%;
+}
+
+.center-it {
+  margin: auto;
+  text-align: center;
+  padding: 0px;
+}
+
+.header-left {
+  float: left;
+  width: 50%;
+  height: 6em;
+  padding-right: 0em;
+  background-color: #F4F4F4;
+}
+
+.header-right {
+  float: right;
+  width: 50%;
+  height: 6em;
+  padding-left: 0em;
+  background-color: #F4F4F4;
+}
+
+.name {
+  display: inline-block;
+  padding-left: .5em;
+  font-family: "Bad Script";
+  font-size: 3em;
+}
+
+.navbar {
+  position: relative;
+  top: 3em;
+  background-color: #F4F4F4;
+  text-align: right;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar ul {
+  padding: 0em;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  list-style: none;
+}
+
+.navbar a {
+  font-family: "Raleway";
+}
+
+.navbar a:hover {
+  text-decoration: ;
+}
+
+.content {
+  clear: both;
+  padding: 1em;
+  background-color: #F8BC6A;
+  color: #F4F4F4;
+}
+
+.quote {
+  width: 55%;
+  margin: auto;
+  padding: 1em;
+  text-align: center;
+  font-family: "Bad Script";
+  background-color: #1552A5;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background-color: #F4F4F4;
+}
+
+
+/*
+- having trouble getting the name & the nav bar to line up on the bottom line
+- need to move the social media icons down
+
+*/
