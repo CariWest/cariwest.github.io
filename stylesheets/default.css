@@ -18,7 +18,9 @@ footer {
   position: relative;
   padding: 1em;
   height: 4em;
-  width: 98%;
+  width: 97%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 pre {
