@@ -80,8 +80,21 @@ img {
   h3 {
     margin: 0;
   }
+
+  .col-md-8 {
+    padding: 0;
+  }
 }
 
-.col-md-8 {
-  padding: 0;
+#about {
+  .row {
+    margin-bottom: .5em;
+    display: flex;
+    align-items: center;
+  }
+
+  .emphasize {
+    font-size: 150%;
+    vertical-align: center;
+  }
 }
