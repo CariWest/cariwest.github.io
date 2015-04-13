@@ -18,7 +18,7 @@ body {
   /*background-image: url('background.png');*/
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Syncopate';
 }
 
@@ -70,4 +70,18 @@ img {
     width: auto;
     z-index: -1;
   }
+}
+
+#projects {
+  img {
+    border: 1px solid #dcdcdc;
+  }
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.col-md-8 {
+  padding: 0;
 }
