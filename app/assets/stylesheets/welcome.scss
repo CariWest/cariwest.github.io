@@ -26,15 +26,18 @@ img {
   border-radius: 1em;
 }
 
-.home-content {
-  min-width: 100%;
-  height: auto;
+.navbar {
+  border-radius: 0px;
 }
 
 .image-text {
   font-size: 105%;
   text-align: center;
   padding: 1em;
+}
+
+.fill {
+  min-height: 100%;
 }
 
 .fill .container {
@@ -44,14 +47,6 @@ img {
 .middle {
   width: $main-width;
   margin: $center-margin;
-}
-
-.navbar {
-  border-radius: 0px;
-}
-
-.fill {
-  min-height: 100%;
 }
 
 #home {
