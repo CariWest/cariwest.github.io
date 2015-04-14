@@ -1,4 +1,4 @@
-class ArticleController < ApplicationController
+class ArticlesController < ApplicationController
   def index
   end
 
@@ -12,6 +12,7 @@ class ArticleController < ApplicationController
   end
 
   def show
+    @article = Article.find(params[:id])
   end
 
   def update
