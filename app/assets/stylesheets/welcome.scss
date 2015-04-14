@@ -2,33 +2,7 @@
 They will automatically be included in application.css.
 You can use Sass (SCSS) here: http://sass-lang.com/*/
 
-$headline-font: Gary, serif;
-$main-width: 100%;
 $center-margin: 1em auto;
-
-* {
-  font-family: 'Merriweather';
-}
-
-html, body {
-    height: 100%;
-}
-
-body {
-  /*background-image: url('background.png');*/
-}
-
-h1, h2, h3 {
-  font-family: 'Syncopate';
-}
-
-img {
-  border-radius: 1em;
-}
-
-.navbar {
-  border-radius: 0px;
-}
 
 .fill {
   min-height: 100%;
@@ -36,11 +10,6 @@ img {
 
 .fill .container {
   width: 60%;
-}
-
-.middle {
-  width: $main-width;
-  margin: $center-margin;
 }
 
 #home {
@@ -84,6 +53,5 @@ img {
 
   .emphasize {
     font-size: 150%;
-    vertical-align: center;
   }
 }

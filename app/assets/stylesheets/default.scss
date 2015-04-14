@@ -1,0 +1,34 @@
+$center-margin: 1em auto;
+
+* {
+  font-family: 'Merriweather';
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+  /*background-image: url('background.png');*/
+}
+
+h1, h2, h3 {
+  font-family: 'Syncopate';
+}
+
+img {
+  border-radius: 1em;
+}
+
+.center {
+  margin: $center-margin;
+}
+
+.emphasize {
+  font-size: 105%;
+  text-align: center;
+}
+
+.navbar {
+  border-radius: 0px;
+}

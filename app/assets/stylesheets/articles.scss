@@ -1,4 +1,26 @@
-.blog-img {
-  size: 60%;
-  margin: auto;
+$center-margin: 1em auto;
+
+.blog {
+  width: 60%;
+
+  h4 {
+    font-weight: bold;
+    margin-top: 1em;
+  }
+
+  .sub-p {
+    margin-left: 1em;
+  }
+}
+
+.image-section {
+  margin: $center-margin;
+}
+
+.img-responsive {
+  margin: $center-margin;
+}
+
+.img-caption {
+  text-align: center;
 }
