@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
   def index
+    @articles = Article.all
+    @recent_article = Article.last
   end
 
   def create

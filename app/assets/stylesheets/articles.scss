@@ -1,16 +1,17 @@
 $center-margin: 1em auto;
 
 .blog {
-  width: 60%;
-
-  h4 {
-    font-weight: bold;
-    margin-top: 1em;
+  .right {
+    text-align: right;
   }
 
-  .sub-p {
-    margin-left: 1em;
+  h1, h2, h3 {
+    text-align: right;
   }
+}
+
+.blog-title {
+  font-weight: bold;
 }
 
 .image-section {
@@ -23,4 +24,8 @@ $center-margin: 1em auto;
 
 .img-caption {
   text-align: center;
+}
+
+.container-fluid {
+  width: 80%;
 }
