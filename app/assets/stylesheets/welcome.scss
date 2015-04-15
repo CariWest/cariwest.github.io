@@ -49,9 +49,15 @@ $center-margin: 1em auto;
     margin-bottom: .5em;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
   .emphasize {
     font-size: 150%;
+  }
+
+  .social-icon {
+    width: 5em;
+    margin: .5em;
   }
 }
