@@ -4,11 +4,11 @@ You can use Sass (SCSS) here: http://sass-lang.com/*/
 
 $center-margin: 1em auto;
 
-//.fill {
-//  min-height: 100%;
-//}
+.fill {
+  min-height: 100%;
+}
 
-.fill .container {
+.narrow .container {
   width: 60%;
 }
 
