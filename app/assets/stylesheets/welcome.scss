@@ -12,8 +12,13 @@ $center-margin: 1em auto;
   width: 60%;
 }
 
+.room-for-navbar {
+  position: relative;
+  margin-top: 5em;
+}
+
 #home {
-  h1 {
+  .main-header {
     margin-top: 0em;
     font-size: 500%;
   }
@@ -23,7 +28,7 @@ $center-margin: 1em auto;
     text-align: right;
   }
 
-  img {
+  .main-img {
     margin-top: 2em;
   }
 }
