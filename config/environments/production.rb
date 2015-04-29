@@ -48,6 +48,8 @@ Rails.application.configure do
   # when problems arise.
   config.log_level = :debug
 
+  config.action_dispatch.default_headers['X-Frame-Options'] = "ALLOW-FROM https://cariwest.herokuapp.com"
+
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 
