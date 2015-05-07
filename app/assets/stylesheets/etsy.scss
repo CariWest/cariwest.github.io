@@ -40,34 +40,23 @@ $off-white: #F5F4F2;
   text-align: center;
   margin: 0;
   padding: 2em;
+  border-bottom: none;
+  border-radius: 0px;
 }
 
 .about-me-heading {
   margin-top: 5em;
 }
 
-.page-header {
-  border-bottom: none;
-}
-
 .feature-about-section {
-  display: flex;
-  justify-content: center;
+
 }
 
 .feature-about-sub-section {
-  margin: 2em;
-  width: 300px;
+  padding: 0 10px;
 
   img {
-    width: 280px;
-    height: auto;
     border-radius: 0;
-    margin: 10px;
-  }
-
-  p {
-    margin: 10px;
   }
 }
 
