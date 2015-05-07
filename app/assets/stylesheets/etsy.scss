@@ -1,0 +1,37 @@
+$blue: #9ADACD;
+$tan: #F2EDBA;
+$brown: #72654A;
+$orange: #FF5E0E;
+$off-white: #F5F4F2;
+
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+
+.etsy {
+  display: relative;
+  height: 100%;
+  font-family: 'Alike';
+
+  * {
+    font-family: 'Alike';
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.banner-hero {
+  display: relative;
+  height: 50%;
+  background-image: url('http://res.cloudinary.com/cariwest/image/upload/c_scale,w_600/v1430945680/GypsyGardenbyPixels_IceCream_m5xpiq.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slogan {
+  color: white;
+  text-align: center;
+  background-color: $blue;
+  padding: 3em 1em;
+}
