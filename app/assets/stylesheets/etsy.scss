@@ -1,0 +1,81 @@
+$blue: #9ADACD;
+$tan: #F2EDBA;
+$brown: #72654A;
+$orange: #FF5E0E;
+$off-white: #F5F4F2;
+
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+
+.etsy {
+  display: relative;
+  height: 100%;
+  font-family: 'Alike';
+
+  * {
+    font-family: 'Alike';
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.banner-hero {
+  display: relative;
+  height: 50%;
+  background-image: url('http://res.cloudinary.com/cariwest/image/upload/c_scale,w_600/v1430945680/GypsyGardenbyPixels_IceCream_m5xpiq.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slogan {
+  color: white;
+  text-align: center;
+  background-color: $blue;
+  padding: 3em 1em;
+}
+
+.about-me {
+  text-align: center;
+  margin: 0;
+  padding: 2em;
+  border-bottom: none;
+  border-radius: 0px;
+}
+
+.about-me-heading {
+  margin-top: 5em;
+}
+
+.feature-about-section {
+
+}
+
+.feature-about-sub-section {
+  padding: 0 10px;
+
+  img {
+    border-radius: 0;
+  }
+}
+
+.resume-button {
+  background-color: white;
+  width: 275px;
+  margin: auto;
+}
+
+.stand-out {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+
+  h3 {
+    margin: 20px 0px;
+  }
+}
+
+.glyphicon-chevron-right {
+  font-size: .5em;
+}
