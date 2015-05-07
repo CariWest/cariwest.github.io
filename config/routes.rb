@@ -2,8 +2,7 @@ Rails.application.routes.draw do
 
   resources :articles
 
-  get '/etsy'
-
+  match '/etsy', to: 'welcome#etsy', via: :get
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
