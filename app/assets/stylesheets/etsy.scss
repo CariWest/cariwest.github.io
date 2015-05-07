@@ -70,3 +70,23 @@ $off-white: #F5F4F2;
     margin: 10px;
   }
 }
+
+.resume-button {
+  background-color: white;
+  width: 275px;
+  margin: auto;
+}
+
+.stand-out {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+
+  h3 {
+    margin: 20px 0px;
+  }
+}
+
+.glyphicon-chevron-right {
+  font-size: .5em;
+}
