@@ -36,10 +36,13 @@ $off-white: #F5F4F2;
   padding: 3em 1em;
 }
 
-.about-me {
+.about-me, .recommended {
   text-align: center;
   margin: 0;
   padding: 2em;
+}
+
+.well {
   border-bottom: none;
   border-radius: 0px;
 }
@@ -49,10 +52,6 @@ $off-white: #F5F4F2;
 }
 
 .feature-about-section {
-
-}
-
-.feature-about-sub-section {
   padding: 0 10px;
 
   img {
@@ -78,4 +77,12 @@ $off-white: #F5F4F2;
 
 .glyphicon-chevron-right {
   font-size: .5em;
+}
+
+.top-padding-big {
+  margin-top: 2em;
+}
+
+.top-padding-small {
+  margin-top: 1em;
 }
