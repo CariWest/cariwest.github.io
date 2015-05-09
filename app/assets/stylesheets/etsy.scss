@@ -38,7 +38,6 @@ $off-white: #F5F4F2;
 
 .about-me, .recommended {
   text-align: center;
-  margin: 0;
   padding: 2em;
 }
 
@@ -51,7 +50,7 @@ $off-white: #F5F4F2;
   margin-top: 5em;
 }
 
-.feature-about-section {
+.feature-grids {
   padding: 0 10px;
 
   img {
@@ -85,4 +84,9 @@ $off-white: #F5F4F2;
 
 .top-padding-small {
   margin-top: 1em;
+}
+
+.skill {
+  height: 100px;
+  border: 1px solid black;
 }
