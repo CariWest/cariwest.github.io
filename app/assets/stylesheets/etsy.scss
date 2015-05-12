@@ -36,9 +36,8 @@ $off-white: #F5F4F2;
   padding: 3em 1em;
 }
 
-.about-me, .recommended {
+.section-header {
   text-align: center;
-  margin: 0;
   padding: 2em;
 }
 
@@ -51,7 +50,7 @@ $off-white: #F5F4F2;
   margin-top: 5em;
 }
 
-.feature-about-section {
+.feature-grids {
   padding: 0 10px;
 
   img {
@@ -85,4 +84,16 @@ $off-white: #F5F4F2;
 
 .top-padding-small {
   margin-top: 1em;
+}
+
+.skill-icon {
+  /*padding: 1em;*/
+
+  img {
+    max-height: 234px;
+  }
+}
+
+blockquote {
+  text-align: left;
 }
