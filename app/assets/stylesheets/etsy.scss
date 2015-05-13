@@ -39,6 +39,10 @@ $off-white: #F5F4F2;
 .section-header {
   text-align: center;
   padding: 2em;
+
+  h2 {
+    margin: 0em;
+  }
 }
 
 .well {
@@ -96,4 +100,16 @@ $off-white: #F5F4F2;
 
 blockquote {
   text-align: left;
+}
+
+.teaching-picture {
+  height: 500px;
+  background: url("https://res.cloudinary.com/cariwest/image/upload/v1431391305/cari-teaching_qfdi3f.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.narrow {
+  width: 60%;
+  margin: auto;
 }
