@@ -1,4 +1,4 @@
-$blue: #9ADACD;
+$blue: rgba(154, 218, 205, .9);
 $tan: #F2EDBA;
 $brown: #72654A;
 $orange: #FF5E0E;
@@ -17,6 +17,11 @@ $off-white: #F5F4F2;
 
   h1 {
     margin: 0;
+  }
+
+  .narrow {
+    width: 60%;
+    margin: auto;
   }
 }
 
@@ -83,7 +88,7 @@ $off-white: #F5F4F2;
 }
 
 .top-padding-big {
-  margin-top: 2em;
+  margin-top: 3em;
 }
 
 .top-padding-small {
@@ -109,7 +114,16 @@ blockquote {
   background-size: cover;
 }
 
-.narrow {
+.contact-me {
   width: 60%;
-  margin: auto;
+  margin: 4em auto;
+  text-align: center;
+}
+
+label {
+  display: none;
+}
+
+.contact-me .form-control {
+  size: '40x10';
 }
