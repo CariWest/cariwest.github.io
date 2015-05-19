@@ -1,4 +1,4 @@
-$blue: rgba(154, 218, 205, .9);
+$blue-transparent: rgba(154, 218, 205, .9);
 $tan: #F2EDBA;
 $brown: #72654A;
 $orange: #FF5E0E;
@@ -37,7 +37,7 @@ $off-white: #F5F4F2;
 .slogan {
   color: white;
   text-align: center;
-  background-color: $blue;
+  background-color: $blue-transparent;
   padding: 3em 1em;
 }
 
