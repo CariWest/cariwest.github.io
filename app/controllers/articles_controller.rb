@@ -4,10 +4,17 @@ class ArticlesController < ApplicationController
     @recent_article = Article.last
   end
 
-  def create
+  def new
+    @article = Article.new
   end
 
-  def new
+  def create
+    @article = Article.new(article_params)
+    if @article.save!
+      redirect_to article_path(@article)
+    else
+      # render page w/ errors
+    end
   end
 
   def edit
@@ -21,5 +28,11 @@ class ArticlesController < ApplicationController
   end
 
   def delete
+  end
+
+  private
+
+  def article_params
+    params.require(:article).permit(:title, :excerpt, :content)
   end
 end

@@ -1,0 +1,22 @@
+<div class="container stubbed">
+  <%= form_for :article, url: articles_path(@article) do |f| %>
+    <p>
+      <%= f.label :title %>
+      <%= f.text_field :title, placeholder: "Title" %>
+    </p>
+
+    <p>
+      <%= f.label :exerpt %>
+      <%= f.text_area :excerpt, placeholder: "Excerpt" %>
+    </p>
+
+    <p>
+      <%= f.label :content %>
+      <%= f.text_area :content, placeholder: "Blog Post" %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+</div>
