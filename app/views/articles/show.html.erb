@@ -1,3 +1,11 @@
-<div class='container blog'>
-  <%= render 'first_post' %>
+<div class='container blog stubbed'>
+  <p>
+    Title: <%= markdown(@article.title) %>
+  </p>
+  <p>
+    Excerpt: <%= markdown(@article.excerpt) %>
+  </p>
+  <p>
+    Content: <%= markdown(@article.content) %>
+  </p>
 </div>
