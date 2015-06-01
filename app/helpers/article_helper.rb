@@ -1,10 +1,11 @@
 module ArticleHelper
 
   class CodeRayify < Redcarpet::Render::HTML
-    # overwrites the block_code method for RedCarpet so we can
-    # parse code blocks with a specific language. Would love to make
-    # this use GitHub instead of CodeRay
-    def block_code(code, language = :ruby)
+    # custom parser, as per Redcarpet's instructions
+    def block_code(code, language)
+      # set a default language in case it isn't specified
+      # setting default in arguments raises a bug
+      language = :ruby if language == nil
       CodeRay.scan(code, language).div(line_numbers: :table, hard_wrap: true)
     end
   end

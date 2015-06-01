@@ -6,12 +6,23 @@ $center-margin: 1em auto;
   }
 
   h1, h2, h3 {
-    text-align: right;
+    font-family: 'Josefin Slab';
+  }
+
+  p {
+    /*font-family: 'Open Sans';*/
   }
 }
 
 .blog-title {
   font-weight: bold;
+}
+
+.sub-header {
+  background-color: #eee;
+  padding: 1em 1em .5em 1em;
+  border-radius: 4px;
+  margin-top: 1.5em;
 }
 
 .image-section {
