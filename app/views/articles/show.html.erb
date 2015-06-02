@@ -1,13 +1,28 @@
 <div class='container blog'>
-  <div class='room-for-navbar'>
-    <p>
-      Title: <%= markdown(@article.title) %>
-    </p>
-    <p>
-      Excerpt: <%= markdown(@article.excerpt) %>
-    </p>
-    <p>
-      Content: <%= markdown(@article.content) %>
-    </p>
+  <div class='row'>
+    <div class='room-for-navbar'>
+      <div class='col-md-4'>
+        <div class='image-section'>
+          <!-- images if they exist -->
+        </div>
+      </div>
+      <div class='col-md-8 blog'>
+        <div class='jumbotron'>
+          <!-- <h1 class='blog-title right'> -->
+            <%= markdown(@article.title) %>
+          <!-- </h1> -->
+
+          <h3 class='blog-date right'>
+            <%=  @article.created_at.to_date.strftime("%e %b %Y") %>
+          </h3>
+        </div>
+
+        <div class='content'>
+          <p>
+            <%= markdown(@article.content) %>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
