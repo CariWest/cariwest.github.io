@@ -29,4 +29,8 @@ module ArticleHelper
     markdown = Redcarpet::Markdown.new(renderer, options)
     markdown.render(content).html_safe
   end
+
+  def format_date(time)
+    time.strftime("%e %b %Y")
+  end
 end

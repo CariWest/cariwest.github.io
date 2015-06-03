@@ -13,7 +13,7 @@
           <!-- </h1> -->
 
           <h3 class='blog-date right'>
-            <%=  @article.created_at.to_date.strftime("%e %b %Y") %>
+            <%=  format_date(@article.created_at.to_date) %>
           </h3>
         </div>
 
