@@ -2,24 +2,24 @@
   <div class='row'>
     <div class='room-for-navbar'>
       <%= form_for :article, url: articles_path(@article) do |f| %>
-        <p>
+        <div class="article-form">
           <%= f.label :title %>
-          <%= f.text_field :title, placeholder: "Title" %>
-        </p>
+          <%= f.text_field :title, placeholder: "Title", class: 'form-control' %>
+        </div>
 
-        <p>
+        <div class="article-form">
           <%= f.label :exerpt %>
-          <%= f.text_area :excerpt, placeholder: "Excerpt" %>
-        </p>
+          <%= f.text_area :excerpt, placeholder: "Excerpt", class: 'form-control', rows: 5 %>
+        </div>
 
-        <p>
+        <div class="article-form">
           <%= f.label :content %>
-          <%= f.text_area :content, placeholder: "Blog Post" %>
-        </p>
+          <%= f.text_area :content, placeholder: "Blog Post", class: 'form-control', rows: 20 %>
+        </div>
 
-        <p>
-          <%= f.submit %>
-        </p>
+        <div class="article-form">
+          <%= f.submit 'Save Post', class: 'btn btn-default' %>
+        </div>
       <% end %>
     </div>
   </div>
