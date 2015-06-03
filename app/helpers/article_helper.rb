@@ -33,4 +33,8 @@ module ArticleHelper
   def format_date(time)
     time.strftime("%e %b %Y")
   end
+
+  def current_user
+    @current_user ||= true
+  end
 end
