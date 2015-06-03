@@ -18,37 +18,13 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-  <!--  -->
-    <div class="container">
-
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav pull-right">
-          <li><a href="/#">Home</a></li>
-          <li><a href="/#projects">Projects</a></li>
-          <li><a href="/articles">Blog</a></li>
-          <li><a href="/#about">About</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </nav>
+  <%= render 'navbarg' %>
 
   <%= yield %>
 
   <% if current_user %>
-    <div class="footer">
-      <div class="container">
-        <p class="text-muted">
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav pull-right">
-              <li><a href="/logout">Log Out</a></li>
-              <li><a href="/articles/new">New Article</a></li>
-            </ul>
-          </div>
-        </p>
-      </div>
-    <% end %>
-  </div>
+    <%= render 'dev_navbar' %>
+  <% end %>
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
