@@ -29,7 +29,7 @@ gem 'coderay'
 gem 'dotenv'
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # test gem
 gem 'simplecov', :require => false, :group => :test
