@@ -17,6 +17,7 @@ class SessionsController < ApplicationController
   end
 
   def delete
+    @session.logout
   end
 
 end
