@@ -6,6 +6,14 @@ class SessionsController < ApplicationController
   end
 
   def create
+    login = @session.login(params["username"], params["password"])
+
+    if !@login
+      not_found
+      @errors = ["User is not valid"]
+    end
+
+    redirect_to root_path
   end
 
   def delete

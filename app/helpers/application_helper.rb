@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def current_user
-    @current_user ||= true
+  def admin
+    @session.admin
   end
 end
