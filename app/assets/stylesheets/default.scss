@@ -4,10 +4,6 @@ $center-margin: 1em auto;
   font-family: 'Merriweather';
 }
 
-html, body {
-    height: 100%;
-}
-
 body {
   /*background-image: url('background.png');*/
 }
@@ -34,5 +30,10 @@ img {
 }
 
 .footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  /*height: 60px;*/
   background-color: #f5f5f5;
 }

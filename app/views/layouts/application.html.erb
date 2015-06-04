@@ -18,12 +18,13 @@
 </head>
 <body>
 
-  <%= render 'navbar' %>
+  <%= render 'welcome/navbar' %>
 
   <%= yield %>
 
-  <% if current_user %>
-    <%= render 'dev_navbar' %>
+
+  <% if admin %>
+    <%= render 'welcome/dev_navbar' %>
   <% end %>
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>

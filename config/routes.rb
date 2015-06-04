@@ -2,7 +2,12 @@ Rails.application.routes.draw do
 
   resources :articles
 
+  match '/login', to: 'sessions#new', via: :get
+  match '/login', to: 'sessions#create', via: :post
+  match '/logout', to: 'sessions#delete', via: :delete
+
   match '/etsy', to: 'welcome#etsy', via: :get
+
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
