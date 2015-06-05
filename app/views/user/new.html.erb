@@ -1,12 +1,14 @@
 <div class="container-fluid room-for-navbar">
-  <form action="/login" method="post">
-    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
 
-    <input type="text" name="username" placeholder="Username">
-    <input type="text" name="email" placeholder="Email">
-    <input type="password" name="password" placeholder="Password">
+  <h1>Sign Up</h1>
 
-    <input type="submit" value="Log In">
+  <%= form_for :user do |f| %>
+    <p>Username: <%= f.text_field :username %></p>
+    <p>Email: <%= f.text_field :email %></p>
+    <p>Password: <%= f.password_field :password_digest %></p>
+    <p>Password: <%= f.password_field :password_confirmation %></p>
+    <p><%= f.submit %></p>
 
-  </form>
+  <% end %>
+
 </div>
