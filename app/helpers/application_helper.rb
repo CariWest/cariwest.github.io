@@ -4,4 +4,8 @@ module ApplicationHelper
     @current_user ||= User.find(session[:id]) if session[:id]
   end
 
+  def admin?
+    current_user.username == ENV['USERNAME'] if current_user
+  end
+
 end
