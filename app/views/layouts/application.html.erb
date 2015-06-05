@@ -22,7 +22,7 @@
 
   <%= yield %>
 
-  <% if admin %>
+  <% if current_user %>
     <%= render 'welcome/dev_navbar' %>
   <% end %>
 
