@@ -4,7 +4,7 @@ class UserController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params) if params[:password] == params[:password_digest]
+    # @user = User.new(user_params) if params[:password] == params[:password_digest]
 
     if @user.save
       session[:id] = @user.id
@@ -16,7 +16,7 @@ class UserController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:username, :email, :password_digest)
+    params.require(:user).permit(:username, :email, :password, :password_confirmation)
   end
 
 end
