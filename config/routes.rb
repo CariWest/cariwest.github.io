@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   match '/login', to: 'sessions#new', via: :get
   match '/login', to: 'sessions#create', via: :post
-  match '/logout', to: 'sessions#delete', via: :delete
+  match '/logout', to: 'sessions#destroy', via: :get
 
   match '/signup', to: 'user#new', via: :get
   match '/signup', to: 'user#create', via: :post
