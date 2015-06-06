@@ -1,23 +1,25 @@
 class SessionsController < ApplicationController
-  include ApplicationHelper
 
   def new
-    @session = Session.new
   end
 
   def create
-    login = @session.login(params["username"], params["password"])
+    user = User.find_by(username: params[:username])
 
-    if !@login
-      not_found
-      @errors = ["User is not valid"]
+    if user && user.authenticate(params[:password])
+      session[:id] = user.id
+      redirect_to root_path
+    else
+      :unauthorized
+      @errors = ["User is not admin"]
+      redirect_to login_path
     end
-
-    redirect_to root_path
   end
 
-  def delete
-    @session.logout
+  def destroy
+    session[:id] = nil
+    @current_user = nil
+    redirect_to root_path
   end
 
 end
