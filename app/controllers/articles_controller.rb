@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   include ApplicationHelper
 
-  before_action :request_login
+  before_action :request_login, except: [:index, :show]
   before_action :authorize, except: [:index, :show]
 
   def index
