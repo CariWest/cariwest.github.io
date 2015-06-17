@@ -36,16 +36,35 @@ $purple: rgb(92, 75, 81);
   height: 17em;
 }
 
-#projects {
-  background-color: $salmon;
-  background-color: rgba(240, 96, 96, .8);
+.interest {
+  margin: 1em auto;
+  text-align: center;
+  border-radius: 15px;
 
-  &:hover {
-    background-color: $salmon;
+  h1 {
+    margin: 0em;
+    padding: .5em;
   }
 }
 
-#blog {
+#projects {
+  .interest {
+    background-color: $salmon;
+    background-color: rgba(240, 96, 96, .8);
+
+    &:hover {
+      background-color: $salmon;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+}
+
+#blog .interest {
   background-color: $orange;
   background-color: rgba(243, 181, 98, .8);
 
@@ -54,7 +73,7 @@ $purple: rgb(92, 75, 81);
   }
 }
 
-#resume {
+#resume .interest {
   background-color: $green;
   background-color: rgba(140, 190, 178, .8);
 
@@ -63,7 +82,7 @@ $purple: rgb(92, 75, 81);
   }
 }
 
-#about {
+#about .interest {
   background-color: $teal;
   background-color: rgba(98, 163, 190, .8);
 
@@ -72,7 +91,7 @@ $purple: rgb(92, 75, 81);
   }
 }
 
-#contact {
+#contact .interest {
   background-color: $purple;
   background-color: rgba(92, 75, 81, .8);
 
