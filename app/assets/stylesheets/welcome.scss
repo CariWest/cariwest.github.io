@@ -2,6 +2,12 @@
 They will automatically be included in application.css.
 You can use Sass (SCSS) here: http://sass-lang.com/*/
 
+$salmon: rgb(240, 96, 96);
+$orange: rgb(243, 181, 98);
+$green: rgb(140, 190, 178);
+$teal: rgb(98, 163, 190);
+$purple: rgb(92, 75, 81);
+
 .banner {
   position: relative;
   width: 100%;
@@ -31,23 +37,48 @@ You can use Sass (SCSS) here: http://sass-lang.com/*/
 }
 
 #projects {
-  background-color: #F06060;
+  background-color: $salmon;
+  background-color: rgba(240, 96, 96, .8);
+
+  &:hover {
+    background-color: $salmon;
+  }
 }
 
 #blog {
-  background-color:#F3B562;
+  background-color: $orange;
+  background-color: rgba(243, 181, 98, .8);
+
+  &:hover {
+    background-color: $orange;
+  }
 }
 
 #resume {
-  background-color:#F2EBBF;
+  background-color: $green;
+  background-color: rgba(140, 190, 178, .8);
+
+  &:hover {
+    background-color: $green;
+  }
 }
 
 #about {
-  background-color:#8CBEB2;
+  background-color: $teal;
+  background-color: rgba(98, 163, 190, .8);
+
+  &:hover {
+    background-color: $teal;
+  }
 }
 
 #contact {
-  background-color:#5C4B51;
+  background-color: $purple;
+  background-color: rgba(92, 75, 81, .8);
+
+  &:hover {
+    background-color: $purple;
+  }
 }
 
 /*$center-margin: 1em auto;
