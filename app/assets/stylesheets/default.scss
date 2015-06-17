@@ -1,4 +1,16 @@
-$center-margin: 1em auto;
+.interest {
+  width: 50%;
+  margin: 1em auto;
+  text-align: center;
+
+  h1 {
+    margin: 0em;
+    padding: 10px;
+  }
+}
+
+
+/*$center-margin: 1em auto;
 
 * {
   font-family: 'Merriweather';
