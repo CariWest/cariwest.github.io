@@ -10,20 +10,11 @@ ListenFor = (function() {
     });
   }
 
-  var toggleDescription = function($elt) {
-    if ($elt.html() == 'More') {
-      $elt.parent().siblings('.hidden').show();
-      $elt.html('Less');
-    } else {
-      $elt.parent().siblings('.hidden').hide();
-      $elt.html('More');
-    }
-  }
-
   var descriptionListener = function() {
     $('.description').on('click', function(event) {
       event.preventDefault();
-      toggleDescription($(this));
+      $(this).parent().siblings('.hidden').show();
+      // still need to implement a way to hide the description
     })
   }
 
