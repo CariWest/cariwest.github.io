@@ -4,8 +4,8 @@
 
 ListenFor = (function() {
   var displaySectionListener = function(section) {
-    $('.main-content').hide();
     $(section).on('click', function(event) {
+      $('.main-content').hide();
       $(this).find('.main-content').show()
     });
   }
