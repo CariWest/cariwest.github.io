@@ -4,14 +4,32 @@
 
 ListenFor = (function() {
   var displaySectionListener = function(section) {
-    $(section).on('click', function(event) {
+    $(section).on('click', '.interest', function(event) {
       $('.main-content').hide();
-      $(this).find('.main-content').show()
+      $(this).siblings('.main-content').show();
     });
   }
 
+  var toggleDescription = function($elt) {
+    if ($elt.html() == 'More') {
+      $elt.parent().siblings('.hidden').show();
+      $elt.html('Less');
+    } else {
+      $elt.parent().siblings('.hidden').hide();
+      $elt.html('More');
+    }
+  }
+
+  var descriptionListener = function() {
+    $('.description').on('click', function(event) {
+      event.preventDefault();
+      toggleDescription($(this));
+    })
+  }
+
   return {
-    section: displaySectionListener
+    section: displaySectionListener,
+    description: descriptionListener
   }
 })();
 
@@ -21,4 +39,6 @@ $(document).ready(function() {
   ListenFor.section('#resume');
   ListenFor.section('#about');
   ListenFor.section('#contact');
+
+  ListenFor.description();
 });
