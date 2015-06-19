@@ -13,14 +13,22 @@ ListenFor = (function() {
   var descriptionListener = function() {
     $('.description').on('click', function(event) {
       event.preventDefault();
-      $(this).parent().siblings('.hidden').show();
+      $(this).parent().siblings().removeClass('hidden');
       // still need to implement a way to hide the description
+    })
+  }
+
+  var lessListener = function() {
+    $('.hidden').on('click', '.less', function(event) {
+      event.preventDefault();
+      $(this).parent().addClass('hidden');
     })
   }
 
   return {
     section: displaySectionListener,
-    description: descriptionListener
+    description: descriptionListener,
+    less: lessListener
   }
 })();
 
@@ -32,4 +40,5 @@ $(document).ready(function() {
   ListenFor.section('#contact');
 
   ListenFor.description();
+  ListenFor.less();
 });
