@@ -22,7 +22,7 @@ ListenFor = (function() {
     $('.hidden').on('click', '.less', function(event) {
       event.preventDefault();
       $(this).parent().addClass('hidden');
-    })
+    });
   }
 
   return {
