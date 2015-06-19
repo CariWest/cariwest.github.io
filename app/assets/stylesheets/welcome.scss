@@ -2,11 +2,12 @@
 They will automatically be included in application.css.
 You can use Sass (SCSS) here: http://sass-lang.com/*/
 
-$salmon: rgb(240, 96, 96);
-$orange: rgb(243, 181, 98);
-$green: rgb(140, 190, 178);
-$teal: rgb(98, 163, 190);
-$purple: rgb(92, 75, 81);
+$salmon: #F06060;
+$orange: #F3B562;
+$green: #8CBEB2;
+$teal: #62A3BE;
+$purple: #5C4B51;
+$opaque: .9;
 
 .banner {
   position: relative;
@@ -44,6 +45,8 @@ $purple: rgb(92, 75, 81);
   h1 {
     margin: 0em;
     padding: .5em;
+    color: white;
+    text-shadow: 2px 2px 2px #000000;
   }
 }
 
@@ -58,10 +61,10 @@ $purple: rgb(92, 75, 81);
 #projects {
   .interest {
     background-color: $salmon;
-    background-color: rgba(240, 96, 96, .8);
+    opacity: $opaque;
 
     &:hover {
-      background-color: $salmon;
+      background-color: darken($salmon, 10%);
     }
   }
 
@@ -74,37 +77,37 @@ $purple: rgb(92, 75, 81);
 
 #blog .interest {
   background-color: $orange;
-  background-color: rgba(243, 181, 98, .8);
+  opacity: $opaque;
 
   &:hover {
-    background-color: $orange;
+    background-color: darken($orange, 10%);
   }
 }
 
 #resume .interest {
   background-color: $green;
-  background-color: rgba(140, 190, 178, .8);
+  opacity: $opaque;
 
   &:hover {
-    background-color: $green;
+    background-color: darken($green, 10%);
   }
 }
 
 #about .interest {
   background-color: $teal;
-  background-color: rgba(98, 163, 190, .8);
+  opacity: $opaque;
 
   &:hover {
-    background-color: $teal;
+    background-color: darken($teal, 10%);
   }
 }
 
 #contact .interest {
   background-color: $purple;
-  background-color: rgba(92, 75, 81, .8);
+  opacity: $opaque;
 
   &:hover {
-    background-color: $purple;
+    background-color: darken($purple, 10%);
   }
 }
 
