@@ -50,12 +50,12 @@ $opaque: .9;
   }
 }
 
-.main-content {
+.hidden {
   display: none;
 }
 
-.hidden {
-  display: none;
+.main-content {
+  @extend .hidden;
 }
 
 #projects {
