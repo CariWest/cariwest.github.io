@@ -9,9 +9,31 @@ $teal: #62A3BE;
 $purple: #5C4B51;
 $opaque: .9;
 
-.banner {
+#banner {
   position: relative;
   width: 100%;
+
+  .banner-img {
+    width: 80%;
+    margin: auto;
+  }
+
+  img {
+    width: 100%;
+    margin: auto;
+  }
+
+  @media screen and (max-width: 500px) {
+
+    .banner-img {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .overlay {
@@ -28,13 +50,6 @@ $opaque: .9;
     margin: 0em;
     padding: .25em 1em;
   }
-}
-
-.full-img {
-  width: 100%;
-  background-image: url('https://res.cloudinary.com/cariwest/image/upload/v1429120133/Cari_LF_142_wrxw3z.jpg');
-  background-size: 100%;
-  height: 17em;
 }
 
 .interest {
