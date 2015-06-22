@@ -2,7 +2,142 @@
 They will automatically be included in application.css.
 You can use Sass (SCSS) here: http://sass-lang.com/*/
 
-$center-margin: 1em auto;
+$salmon: #F06060;
+$orange: #F3B562;
+$green: #8CBEB2;
+$teal: #62A3BE;
+$purple: #5C4B51;
+$opaque: .9;
+
+#banner {
+  position: relative;
+  width: 100%;
+
+  .banner-img {
+    width: 80%;
+    margin: auto;
+  }
+
+  img {
+    width: 100%;
+    margin: auto;
+  }
+
+  @media screen and (max-width: 500px) {
+
+    .banner-img {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.overlay {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.header {
+  position: absolute;
+  bottom: 0px;
+
+  h1, h2 {
+    margin: 0em;
+    padding: .25em 1em;
+  }
+}
+
+.interest {
+  margin: 1em auto;
+  text-align: center;
+  border-radius: 15px;
+
+  h1 {
+    margin: 0em;
+    padding: .5em;
+    color: white;
+    text-shadow: 2px 2px 2px #000000;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.main-content {
+  @extend .hidden;
+}
+
+#projects {
+  .interest {
+    background-color: $salmon;
+    opacity: $opaque;
+
+    &:hover {
+      background-color: darken($salmon, 10%);
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+}
+
+#blog .interest {
+  background-color: $orange;
+  opacity: $opaque;
+
+  &:hover {
+    background-color: darken($orange, 10%);
+  }
+}
+
+#resume .interest {
+  background-color: $green;
+  opacity: $opaque;
+
+  &:hover {
+    background-color: darken($green, 10%);
+  }
+}
+
+#about {
+  .interest {
+    background-color: $teal;
+    opacity: $opaque;
+
+    &:hover {
+      background-color: darken($teal, 10%);
+    }
+  }
+
+  .img-med {
+    width: 75%;
+    margin: auto;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+#contact .interest {
+  background-color: $purple;
+  opacity: $opaque;
+
+  &:hover {
+    background-color: darken($purple, 10%);
+  }
+}
+
+/*$center-margin: 1em auto;
 
 .fill {
   min-height: 100%;
@@ -69,3 +204,4 @@ $center-margin: 1em auto;
     margin: .5em;
   }
 }
+*/
