@@ -108,12 +108,23 @@ $opaque: .9;
   }
 }
 
-#about .interest {
-  background-color: $teal;
-  opacity: $opaque;
+#about {
+  .interest {
+    background-color: $teal;
+    opacity: $opaque;
 
-  &:hover {
-    background-color: darken($teal, 10%);
+    &:hover {
+      background-color: darken($teal, 10%);
+    }
+  }
+
+  .img-med {
+    width: 75%;
+    margin: auto;
+
+    img {
+      width: 100%;
+    }
   }
 }
 
