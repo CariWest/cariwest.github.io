@@ -3,22 +3,21 @@
 // You can use CoffeeScript in this file: http://coffeescript.org/
 
 ListenFor = (function() {
-  var displaySectionListener = function(section) {
+  var displaySection = function(section) {
     $(section).on('click', '.interest', function(event) {
       $('.main-content').hide('slow');
       $(this).siblings('.main-content').show('slow');
     });
   }
 
-  var descriptionListener = function() {
+  var description = function() {
     $('.description').on('click', function(event) {
       event.preventDefault();
       $(this).parent().siblings().removeClass('hidden');
-      // still need to implement a way to hide the description
     })
   }
 
-  var lessListener = function() {
+  var less = function() {
     $('.hidden').on('click', '.less', function(event) {
       event.preventDefault();
       $(this).parent().addClass('hidden');
@@ -26,9 +25,9 @@ ListenFor = (function() {
   }
 
   return {
-    section: displaySectionListener,
-    description: descriptionListener,
-    less: lessListener
+    section: displaySection,
+    description: description,
+    less: less
   }
 })();
 
