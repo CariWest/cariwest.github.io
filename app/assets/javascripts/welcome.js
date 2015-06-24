@@ -3,10 +3,17 @@
 // You can use CoffeeScript in this file: http://coffeescript.org/
 
 ListenFor = (function() {
+  function visibility(element) {
+    return element.is(':visible')
+  }
+
   var displaySection = function(section) {
     $(section).on('click', '.interest', function(event) {
-      $('.main-content').hide('slow');
-      $(this).siblings('.main-content').show('slow');
+      $elt = $(this).siblings('.main-content');
+      if (visibility($elt) === false) {
+        $('.main-content').hide('slow');
+        $elt.show('slow');
+      }
     });
   }
 
