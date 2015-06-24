@@ -85,14 +85,18 @@ $subheaderFont: 'Merriweather';
   @extend .hidden;
 }
 
+.opacity-selector {
+  opacity: .9;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
 #projects {
   .interest {
     background-color: $salmon;
-    opacity: $opaque;
-
-    &:hover {
-      background-color: darken($salmon, 10%);
-    }
+    @extend .opacity-selector;
   }
 
   img {
@@ -104,30 +108,18 @@ $subheaderFont: 'Merriweather';
 
 #blog .interest {
   background-color: $orange;
-  opacity: $opaque;
-
-  &:hover {
-    background-color: darken($orange, 10%);
-  }
+  @extend .opacity-selector;
 }
 
 #resume .interest {
   background-color: $green;
-  opacity: $opaque;
-
-  &:hover {
-    background-color: darken($green, 10%);
-  }
+  @extend .opacity-selector;
 }
 
 #about {
   .interest {
     background-color: $teal;
-    opacity: $opaque;
-
-    &:hover {
-      background-color: darken($teal, 10%);
-    }
+    @extend .opacity-selector;
   }
 
   .img-med {
@@ -142,9 +134,5 @@ $subheaderFont: 'Merriweather';
 
 #contact .interest {
   background-color: $purple;
-  opacity: $opaque;
-
-  &:hover {
-    background-color: darken($purple, 10%);
-  }
+  @extend .opacity-selector;
 }
