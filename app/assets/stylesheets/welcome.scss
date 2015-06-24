@@ -14,13 +14,8 @@ $opaque: .9;
 $headerFont: 'Josefin Slab';
 $subheaderFont: 'Merriweather';
 
-* {
-  font-family: $subheaderFont;
-}
-
 #banner {
   position: relative;
-  width: 100%;
 
   .banner-img {
     width: 80%;
@@ -35,11 +30,6 @@ $subheaderFont: 'Merriweather';
   @media screen and (max-width: 500px) {
     .banner-img {
       width: 100%;
-    }
-
-    img {
-      width: 100%;
-      height: auto;
     }
   }
 }

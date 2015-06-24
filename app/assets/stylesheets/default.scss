@@ -1,56 +1,18 @@
+$subheaderFont: 'Merriweather';
+
+* {
+  font-family: $subheaderFont;
+}
+
 .container {
   width: 80%;
   margin: auto;
-}
 
-@media screen and (max-width: 500px) {
-  .container {
+  @media screen and (max-width: 500px) {
     width: 90%;
-    margin: auto;
   }
 }
 
 .rounded {
   border-radius: 15px;
 }
-
-
-/*$center-margin: 1em auto;
-
-* {
-  font-family: 'Merriweather';
-}
-
-body {
-  background-image: url('background.png');
-}
-
-h1, h2, h3 {
-  font-family: 'Syncopate';
-}
-
-img {
-  border-radius: 1em;
-}
-
-.center {
-  margin: $center-margin;
-  text-align: center;
-}
-
-.emphasize {
-  font-size: 110%;
-}
-
-.navbar {
-  border-radius: 0px;
-}*/
-
-/*.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;*/
-  /* Set the fixed height of the footer here */
-  /*height: 60px;*/
-/*  background-color: #f5f5f5;
-}*/
