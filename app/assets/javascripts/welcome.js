@@ -3,32 +3,38 @@
 // You can use CoffeeScript in this file: http://coffeescript.org/
 
 ListenFor = (function() {
-  var displaySectionListener = function(section) {
+  function visibility(element) {
+    return element.is(':visible')
+  }
+
+  var displaySection = function(section) {
     $(section).on('click', '.interest', function(event) {
-      $('.main-content').hide('slow');
-      $(this).siblings('.main-content').show('slow');
+      $elt = $(this).siblings('.main-content');
+      if (visibility($elt) === false) {
+        $('.main-content').hide('slow');
+        $elt.show('slow');
+      }
     });
   }
 
-  var descriptionListener = function() {
+  var description = function() {
     $('.description').on('click', function(event) {
       event.preventDefault();
-      $(this).parent().siblings().removeClass('hidden');
-      // still need to implement a way to hide the description
+      $(this).parent().siblings('.hidden').show('slow');
     })
   }
 
-  var lessListener = function() {
+  var less = function() {
     $('.hidden').on('click', '.less', function(event) {
       event.preventDefault();
-      $(this).parent().addClass('hidden');
+      $(this).parent().hide('slow');
     });
   }
 
   return {
-    section: displaySectionListener,
-    description: descriptionListener,
-    less: lessListener
+    section: displaySection,
+    description: description,
+    less: less
   }
 })();
 
