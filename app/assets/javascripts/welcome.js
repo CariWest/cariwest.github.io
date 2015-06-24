@@ -13,14 +13,14 @@ ListenFor = (function() {
   var description = function() {
     $('.description').on('click', function(event) {
       event.preventDefault();
-      $(this).parent().siblings().removeClass('hidden');
+      $(this).parent().siblings('.hidden').show('slow');
     })
   }
 
   var less = function() {
     $('.hidden').on('click', '.less', function(event) {
       event.preventDefault();
-      $(this).parent().addClass('hidden');
+      $(this).parent().hide('slow');
     });
   }
 
