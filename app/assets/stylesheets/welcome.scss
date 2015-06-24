@@ -55,29 +55,21 @@ $subheaderFont: 'Merriweather';
 
   h1, h2 {
     margin: 0em;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 500px) {
+    background-color: transparent;
+    padding: 0em;
+    position: relative;
+    color: black;
+    top: 0em;
+    left: 0em;
   }
 
   .embiggen {
     font-family: $headerFont;
     font-size: 200%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .header {
-    background-color: transparent;
-    padding: 0em;
-    position: relative;
-    color: black;
-
-    position: relative;
-    top: 0%;
-    left: 0%;
-
-    h1, h2 {
-      margin: 0em;
-      text-align: center;
-    }
   }
 }
 
